@@ -2,8 +2,7 @@
     <!-- 公共头部 -->
     <!-- https://bulma.io/documentation/layout/hero/ -->
     <div id="header">
-        <!-- 两个色值渐变gradient -->
-        <section class="hero is-primary is-medium">
+        <section class="hero is-primary is-medium is-bold -gradient">
             <!-- Hero head: will stick at the top -->
             <div class="hero-head">
                 <b-navbar>
@@ -52,7 +51,8 @@
             <div class="hero-body">
                 <div class="container has-text-centered fade-enter-active">
                     <h1 class="title is-size-1 has-text-white">
-                        👋你好，我是杨铮！
+                        <!-- 高中时练过仿宋字 -->erty
+                        👋<img src="../assets/fonts/你好我是杨铮_微软仿宋.svg">
                     </h1>
                     <h2 class="subtitle is-size-4 has-text-white-lighter "
                         :class="{'-typing-animation': isShowAnimation}"
@@ -61,7 +61,7 @@
                     >
                         {{ subtitleContent }}
                     </h2>
-                    <h3 class="subtitle is-size-6 has-text-grey-lighter">
+                    <h3 class="subtitle is-size-6 has-text-white-lighter">
                         <b-icon icon="map-marker" size="is-small"></b-icon>郑州
                     </h3>
                 </div>
@@ -69,18 +69,7 @@
 
             <!-- Hero footer: will stick at the bottom -->
             <div class="hero-foot">
-                <nav class="tabs">
-                    <div class="container">
-                        <ul>
-                            <li class="is-active"><a>Overview</a></li>
-                            <li><a>Modifiers</a></li>
-                            <li><a>Grid</a></li>
-                            <li><a>Elements</a></li>
-                            <li><a>Components</a></li>
-                            <li><a>Layout</a></li>
-                        </ul>
-                    </div>
-                </nav>
+
             </div>
         </section>
 
@@ -93,7 +82,7 @@
         name: "Header",
         data: function () {
             return {
-                subtitleContent: '一位喜欢探究新事物的全栈工程师',
+                subtitleContent: '一位喜欢探究新事物的全栈工程师',  // 15字
                 isShowAnimation: true,
                 timer: null,
             }
@@ -102,12 +91,14 @@
             sleep(ms) {
                 return new Promise(resolve => setTimeout(resolve, ms))
             },
-            // 鼠标悬停重放动画小彩蛋，因为页面刚开始加载的一次可能没被注意到
+            // 鼠标悬停重放打字动画小彩蛋
             replayAnimation() {
                 this.timer = setTimeout(async ()=>{
                     this.isShowAnimation = false
                     // 删除class 动画样式再添加可重放动画，但必须间隔短暂延迟不然框架反应不过来
                     await this.sleep(100)
+                                        // '一位喜欢探究新事物的全栈工程师'
+                    this.subtitleContent = '被生活所迫啥都学的全干型人才😭',
                     this.isShowAnimation = true
                 }, 3000)
             },
@@ -161,6 +152,16 @@
 </script>
 
 <style scoped>
+    .-gradient{
+        /* 渐变背景
+           色环相距60度，高饱和，冷暖平衡，时尚青紫渐变
+        */
+        background-image: linear-gradient( 135deg, #43CBFF 10%, #9708CC 100%)!important;
+    }
+    .hero.is-medium .hero-body{
+        padding: 5rem 0 !important;
+    }
+
     /* 打字特效
        教程思路巧妙 https://www.weiyiqi.net/html/htmlcss/326.html
                   https://www.zhangxinxu.com/wordpress/2018/06/css3-animation-steps-step-start-end/?shrink=1
@@ -177,7 +178,7 @@
         }
     }
     .-typing-animation {
-        width: 15.5em;   /*文字容器宽度。ch一英文字符宽度，一汉字约2ch。ch实际效果并不准，最终用em。框架字体1em，乘字数*/
+        width: 16em;   /*文字容器宽度。ch一英文字符宽度，一汉字约2ch。ch实际效果并不准，最终用em。框架字体1em，乘字数*/
         border-right: solid 4px rgba(249, 249, 249, 0.8);/*容器右边缘作为光标*/
         white-space: nowrap;/*css方式要求文本只能一行*/
         overflow: hidden;

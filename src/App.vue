@@ -1,17 +1,12 @@
 <template>
   <div id="app">
-    <Home></Home>
+    <!-- 页面为单位进行渲染 -->
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
-import Home from '@/views/Home.vue'
 
-export default {
-  components: {
-    Home
-  }
-}
 </script>
 
 <style>

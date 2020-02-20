@@ -1,7 +1,7 @@
 <template>
     <!-- 公共头部 -->
     <!-- https://bulma.io/documentation/layout/hero/ -->
-    <div id="header">
+    <div id="c_header">
         <section class="hero is-primary is-medium -gradient">
             <!-- Hero head: will stick at the top -->
             <div class="hero-head">
@@ -25,7 +25,7 @@
                             </b-icon>
                             <span>关于我</span>
                         </b-navbar-item>
-                        <b-navbar-item href="#/apps">
+                        <b-navbar-item tag="router-link" :to="{ path: '/works' }">
                             <b-icon
                                     icon="apps"
                                     size="is-small"
@@ -44,6 +44,8 @@
                             </div>
                         </b-navbar-item>
                     </template>
+
+                    <!-- todo 移动端 菜单图标为黑色三横杠，应该用插槽改成白色。navitem内容居中。-->
                 </b-navbar>
             </div>
 
@@ -79,10 +81,7 @@
                     </svg>
                 </div>
             </div>
-
-
         </section>
-
 
     </div>
 </template>

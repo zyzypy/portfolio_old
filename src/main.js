@@ -1,6 +1,6 @@
 import Vue from 'vue'
 
-import router from './router'
+import router from './router/router'
 // buefy（类似elementUI）  基于bulma（类似bootstrap）的vue组件库
 import Buefy from 'buefy'
 import 'buefy/dist/buefy.css'

@@ -2,15 +2,15 @@
     <!-- 公共头部 -->
     <!-- https://bulma.io/documentation/layout/hero/ -->
     <div id="c_header">
-        <section class="hero is-primary is-medium -gradient">
+        <section class="hero is-primary is-medium -gradientbg">
             <!-- Hero head: will stick at the top -->
             <div class="hero-head">
-                <b-navbar>
+                <b-navbar type="is-primary" fixed-top class="-gradientbg"><!--buefy v0.8.10存在没有fixedtop切换路由报vue warn remove的一个错误-->
                     <template slot="brand">
                         <b-navbar-item tag="router-link" :to="{ path: '/' }">
                             <img
                                     src="https://raw.githubusercontent.com/buefy/buefy/dev/static/img/buefy-logo.png"
-                                    alt="Lightweight UI components for Vue.js based on Bulma"
+                                    alt="aaa"
                             >
                         </b-navbar-item>
                     </template>
@@ -206,8 +206,6 @@
                     return ['M', start, cacheData[index]].join('');
                 }
             }
-        },
-        mounted(){
         }
     }
 
@@ -254,7 +252,7 @@
 </script>
 
 <style scoped>
-    .-gradient{
+    .-gradientbg{
         /* 渐变背景
            色环相距60度，高饱和，冷暖平衡，时尚青紫渐变
            https://webkul.github.io/coolhue/

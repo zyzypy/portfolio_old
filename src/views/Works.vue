@@ -5,10 +5,13 @@
 
         <section id="s_catalogs" class="section">
             <div class="container">
-                <ul name="catalogs" class=" is-mobile -catalogs">
-                    <li class=" is-2"
-                        v-for="item in catalogs"
-                        :key="item.key"
+                <ul name="catalogs" class="is-mobile -catalogs">
+
+                    <li class="is-2"
+                        v-for="(item,index) in catalogs"
+                        :key="index"
+                        :class="{'-active is-primary': index===isActiveIndex}"
+                        @click="changeCatelogFocus(index, item.key, $event)"
                     >
                         <a href="#" class="is-center">
                             <b-icon
@@ -35,44 +38,58 @@
         },
         data: function () {
             return {
+                // 子目录激活状态
+                isActiveIndex: null,
                 // 目录信息维护
                 catalogs: [
                     {
-                        key: 'backend',
-                        name: '后端',
+                        key: 'all',
+                        name: '所有',
                         icon: 'console',
+                        illustration: '',
                         introduce: `我拥有7年后端经验....`,
                     },
                     {
                         key: 'backend',
                         name: '后端',
                         icon: 'console',
+                        illustration: '',
                         introduce: `我拥有7年后端经验....`,
                     },{
                         key: 'backend',
                         name: '后端',
                         icon: 'console',
+                        illustration: '',
                         introduce: `我拥有7年后端经验....`,
                     },{
                         key: 'backend',
                         name: '后端',
                         icon: 'console',
+                        illustration: '',
                         introduce: `我拥有7年后端经验....`,
                     },{
                         key: 'backend',
                         name: '后端',
                         icon: 'console',
+                        illustration: '',
                         introduce: `我拥有7年后端经验....`,
                     },{
                         key: 'backend',
                         name: '后端',
                         icon: 'console',
+                        illustration: '',
                         introduce: `我拥有7年后端经验....`,
-                    },
+                    }
                 ],
                 works: [
 
                 ]
+            }
+        },
+        methods: {
+            // 点击子目录，更改样式和调出所属目录作品
+            changeCatelogFocus(index) {
+                this.isActiveIndex = index
             }
         }
     }
@@ -86,26 +103,38 @@
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        justify-content: space-between;
+        justify-content: space-around;
     }
     .-catalogs li {
-        /*border: 1px solid gray;*/
         flex-grow: 0; /*item排完后是否占用主轴方向空间，默认0，内容多宽占多宽。都为1时等分*/
         flex-shrink: 0; /*shrunk缩放，默认1 true，为0禁止屏幕缩小时也跟着变小*/
-        border-bottom: 1px solid rgb(180,180,180);
-        color: rgb(95,95,95);
-        padding: 0.5rem 1rem;
+        border-bottom: 1px solid rgb(180,180,180);/*装饰下滑线*/
+        color: rgb(110,110,110);
+        padding: 0rem 1rem 0rem 0.8rem; /*图标视觉重量轻，内容居中稍偏左*/
     }
     .-catalogs li:hover {
-        color: rgb(75,75,75);
+        color: rgb(130,130,130);
         border-bottom: 1px solid rgb(100, 100, 100);
     }
     .-catalogs li a {
-        display: block; /*扩大a触发范围,如果要求充满li则li需要padding=0*/
+        /*扩大a触发范围。文字居中。去除默认链接文字颜色。*/
+        display: block;
         width: 100%;
         height: 100%;
         text-align: center;
         color: inherit;
+    }
+    .-catalogs li a span {
+        margin-left: 0.3rem; /*避免图标和文字挨的太近*/
+    }
+    .-catalogs li.-active {
+        /*点击目录时*/
+        font-size: 1.5rem;
+        border-bottom: none;
+    }
+    .-catalogs li.-active a {
+        /*点击目录时。 因为上面li普通状态时color灰色，buefy自带的is-primary被覆盖，这里再定义一下 */
+        color: #7957d5;
     }
 
 </style>

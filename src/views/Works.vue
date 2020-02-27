@@ -31,7 +31,6 @@
             <div class="container is-centered -desc">
                 <div class="columns is-vcentered is-5">
                     <div name="illustration" class="column is-one-thirds level-left">
-<!--                        <img src="../assets/images/linux_server.gif" alt="illustration">-->
                         <img :src="activeCatalog.illustration" alt="illustration">
                     </div>
                     <div class="column is-two-thirds level-right">
@@ -42,6 +41,13 @@
                         </p>
                     </div>
                 </div>
+            </div>
+        </section>
+
+        <!-- 当一个子目录激活时带出作品列表 -->
+        <section id="s_works" class="-works -gradientbg">
+            <div name="curved-separator"><img :src=separatorSrc class="-separator"></div>
+            <div class="container is-centered">
             </div>
         </section>
 
@@ -122,20 +128,25 @@
                         illustration: require('../assets/images/linux_server.gif'),
                         introduce: `大学时只听说过linux好像很🐂🍺的样子，但并不了解<br>
                                     虚拟机装了一个linux，尝鲜桌面后就不知道干嘛了<br>
-                                    自学python基础后开始玩树莓派<br>
-                                    实验楼的linux基础教程很好<br>
-                                    发觉linux的精髓是命令行，只有前期令人生畏，其余只要搜索教程和变更命令就行<br>
-                                    我想像别人一样做一个可以访问的网站<br>
-                                    云服务器、域名、备案、部署，一套做下来就会了
+                                    习得python基础后开始玩树莓派<br>
+                                    实验楼网站上的linux基础教程很好<br>
+                                    发觉linux的精髓是命令行和做服务，只有前期令人生畏，其余只要搜索教程和变更命令就行<br>
+                                    我也想像做一个可以访问的网站<br>
+                                    云服务器、域名、备案、部署，一套做下来就会了<br>
+                                    熟悉各种linux基础操作和搭建常见服务，熟悉阿里云、腾讯云生态
                                     `
                     },{
                         key: 'hobbies',
                         name: '爱好',
                         icon: 'piano',
                         illustration: require('../assets/images/hobbies.gif'),
-                        introduce: `我拥有7年后端经验....`
+                        introduce: `生活需要趣味<br>
+                                    动漫👀 新闻🆕 逛论坛💬 游戏🎮 硬件💻 音乐🎵 乐高🪀 绘画🎨 骑行🚴 <br>
+                                    随性玩，但争取玩的像回事
+                                    `
                     }
-                ]
+                ],
+                separatorSrc: require('../assets/svgs/separator.svg')
             }
         },
         methods: {
@@ -209,5 +220,17 @@
     }
     .-desc [name='illustration'] {
         padding: 0.5em;
+    }
+
+    /* 子目录对应的作品列表 */
+    .-works {
+        height: 5000px;
+        margin-top: 7rem;
+    }
+    .-works.-gradientbg {
+        background-image: linear-gradient(-5deg, #43CBFF 5%, #9708CC 95%);
+    }
+    .-separator {
+        transform: scale(1.1, 1) translateY(-2px);
     }
 </style>

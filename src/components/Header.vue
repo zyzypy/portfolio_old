@@ -2,11 +2,11 @@
     <!-- 公共头部 -->
     <!-- https://bulma.io/documentation/layout/hero/ -->
     <div id="c_header">
-        <section class="hero is-medium is-primary -gradientbg">
+        <section class="hero is-medium is-primary -gradient-bg">
             <!-- Hero head: will stick at the top -->
             <div class="hero-head">
-                <!-- buefy v0.8.10 navbar组件存在没有fixed-top切换路由报vue warn remove的一个错误，加上后首次进入首页无背景色 -->
-                <b-navbar type="is-primary" class="">
+                <!-- buefy v0.8.10 navbar组件存在没有fixed-top属性切换路由报vue warn remove的一个错误，加上后首次进入首页无背景色 -->
+                <b-navbar type="is-primary" class="is-primary -nav-gradient-bg" fixed-top>
                     <template slot="brand">
                         <b-navbar-item tag="router-link" :to="{ path: '/' }">
                             <img
@@ -253,13 +253,17 @@
 </script>
 
 <style scoped>
-    .-gradientbg{
+    .-nav-gradient-bg {
+        background-color: transparent !important;
+        background-image: linear-gradient(45deg, rgba(95, 174, 247, 0.95) 5%, rgba(151, 8, 204, 0.95) 95%) !important;
+    }
+    .-gradient-bg{
         /* 渐变背景
            色环相距60度，高饱和，冷暖平衡，时尚青紫渐变
            https://webkul.github.io/coolhue/
         */
         /*background-image: linear-gradient(45deg, #0aabc7, #bb09d3)*/
-        background-image: linear-gradient( 45deg, #43CBFF 5%, #9708CC 95%);
+        background-image: linear-gradient(45deg, #43CBFF 5%, #9708CC 95%);
     }
     .hero.is-medium .hero-body{
         padding-top: 5rem !important;

@@ -47,7 +47,27 @@
         <!-- 当一个子目录激活时带出作品列表 -->
         <section id="s_works" class="-works -gradientbg">
             <div name="curved-separator"><img :src=separatorSrc class="-separator"></div>
-            <div class="container is-centered">
+            <div class="container is-centered has-text-white-ter">
+                <div name="catalog" class="is-center has-text-centered is-size-2">
+                    <b-icon :icon="activeCatalog.icon" size="is-medium"></b-icon>
+                    <span>{{activeCatalog.key}}</span>
+                </div>
+                <div name="works" class="container">
+                    <ul class="">
+                        <li name="work" class="columns is-vcentered">
+                            <div name="work-illustration" class="column is-two-fifths-desktop-only"><img alt="项目封面图" :src="activeCatalog.illustration"></div>
+                            <div name="work-description" class="column is-three-fifths-desktop-only">
+                                <h1 class="is-size-2 has-text-weight-semibold">xxx项目</h1>
+                                <h2 class="is-size-5"><b>技术栈: </b>html,python</h2>
+                                <h2 class="is-size-5"><b>框架: </b></h2>
+                                <h2 class="is-size-5"><b>分类: </b></h2>
+                                <h2 class="is-size-5"><b>场景: </b></h2>
+                                <p class="is-size-5">简短一段介绍啦啦啦啦啦啦</p>
+                                <span name="button-group"><button class="button">aaa</button></span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </section>
 
@@ -70,7 +90,7 @@
                 // 目录信息维护
                 catalogs: [
                     {
-                        key: 'all',
+                        key: 'All',
                         name: '所有',
                         icon: 'apps',
                         // 静态文件路径会被编译，绑定src时不能用本地路径,使用require
@@ -84,7 +104,7 @@
                                     `
                     },
                     {
-                        key: 'backend',
+                        key: 'Backend',
                         name: '后端',
                         icon: 'console',
                         illustration: require('../assets/images/python.gif'),
@@ -98,7 +118,7 @@
                                     后端深奥仍在学习进步中
                                     `
                     },{
-                        key: 'ui',
+                        key: 'UI&UX',
                         name: '设计&交互',
                         icon: 'brush',
                         illustration: require('../assets/images/ui_design.gif'),
@@ -109,7 +129,7 @@
                                     以下作品时间为2013-2014年，质量跟现在成熟的行业有差距
                                     `
                     },{
-                        key: 'vuejs',
+                        key: 'Frontend',
                         name: '前端',
                         icon: 'console',
                         illustration: require('../assets/images/frontend.gif'),
@@ -122,12 +142,12 @@
                                     授课过程中前端基础得到锻炼、框架也随之清晰，开始用起来了
                                     `
                     },{
-                        key: 'server',
+                        key: 'Server',
                         name: '服务器',
                         icon: 'server',
                         illustration: require('../assets/images/linux_server.gif'),
                         introduce: `大学时只听说过linux好像很🐂🍺的样子，但并不了解<br>
-                                    虚拟机装了一个linux，尝鲜桌面后就不知道干嘛了<br>
+                                    虚拟机装了一个ubuntu，尝鲜桌面后就不知道干嘛了<br>
                                     习得python基础后开始玩树莓派<br>
                                     实验楼网站上的linux基础教程很好<br>
                                     发觉linux的精髓是命令行和做服务，只有前期令人生畏，其余只要搜索教程和变更命令就行<br>
@@ -136,12 +156,12 @@
                                     熟悉各种linux基础操作和搭建常见服务，熟悉阿里云、腾讯云生态
                                     `
                     },{
-                        key: 'hobbies',
+                        key: 'Hobbies',
                         name: '爱好',
                         icon: 'piano',
                         illustration: require('../assets/images/hobbies.gif'),
                         introduce: `生活需要趣味<br>
-                                    动漫👀 新闻🆕 逛论坛💬 游戏🎮 硬件💻 音乐🎵 乐高🪀 绘画🎨 骑行🚴 <br>
+                                    动漫👀 新闻🆕 逛论坛💬 游戏🎮 硬件💻 音乐🎵 乐高🤖️️ 绘画🎨 骑行🚴 <br>
                                     随性玩，但争取玩的像回事
                                     `
                     }
@@ -228,9 +248,44 @@
         margin-top: 7rem;
     }
     .-works.-gradientbg {
-        background-image: linear-gradient(-5deg, #43CBFF 5%, #9708CC 95%);
+        background-image: linear-gradient(45deg, #43CBFF 5%, #9708CC 95%);
     }
-    .-separator {
+    .-works .-separator {
         transform: scale(1.1, 1) translateY(-2px);
+    }
+    .-works div[name="catalog"] span {
+        margin-left: 1rem;
+    }
+    .-works div[name="works"] {
+        width: 80%;
+        max-width: 1200px;
+        margin-top: 2rem;
+    }
+    .-works ul {
+    }
+    .-works li[name="work"] {
+        /* 一个作品 */
+        width: 100%;
+        /*height: 20rem; !* 文字可能多可能少，定死图片高，li不限制 *!*/
+        margin: 0;
+        padding: 2rem;
+        border-bottom: 2px solid rgba(255,255,255,0.1); /* 分割线 */
+        /*align-items: center;  flex导致的缩放比较影响图片效果  */
+    }
+    .-works li[name="work"] div[name="work-illustration"] {
+        flex-shrink: 0;
+    }
+    .-works li[name="work"] div[name="work-illustration"] img{
+        height: 100%;
+        max-height: 20rem; /* 手机布局 图片宽度100%防止过大 */
+        max-width: 30rem;
+        border-radius: 14px;
+    }
+    .-works li[name="work"] div[name="work-description"] {
+    }
+    .-works li[name="work"] div[name="separate-line"] {
+        width: 80%;
+        border-top: 1px solid rgba(100,100,100,0.5);
+        border-bottom: 2px solid rgba(0,0,0,0.5);
     }
 </style>

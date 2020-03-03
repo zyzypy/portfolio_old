@@ -58,12 +58,16 @@
                             <div name="work-illustration" class="column is-two-fifths-desktop-only"><img alt="项目封面图" :src="activeCatalog.illustration"></div>
                             <div name="work-description" class="column is-three-fifths-desktop-only">
                                 <h1 class="is-size-2 has-text-weight-semibold">xxx项目</h1>
-                                <h2 class="is-size-5"><b>技术栈: </b>html,python</h2>
+                                <h2 class="is-size-5"><b>语言: </b>html,python</h2>
                                 <h2 class="is-size-5"><b>框架: </b></h2>
                                 <h2 class="is-size-5"><b>分类: </b></h2>
+                                <h2 class="is-size-5"><b>关键字: </b></h2>
                                 <h2 class="is-size-5"><b>场景: </b></h2>
-                                <p class="is-size-5">简短一段介绍啦啦啦啦啦啦</p>
-                                <span name="button-group"><button class="button">aaa</button></span>
+                                <p class="is-size-5">简要介绍简短一段介绍啦啦啦啦啦啦</p>
+                                <div name="work-links">
+                                    <b-button type="is-light" outlined size="is-medium" tag="button" href="#" target="_blank">在线演示</b-button>
+                                    <b-button type="is-light" outlined size="is-medium" tag="button" href="#" target="_blank">在线演示</b-button>
+                                </div>
                             </div>
                         </li>
                     </ul>
@@ -276,12 +280,22 @@
         flex-shrink: 0;
     }
     .-works li[name="work"] div[name="work-illustration"] img{
-        height: 100%;
+        height: 80%;
         max-height: 20rem; /* 手机布局 图片宽度100%防止过大 */
         max-width: 30rem;
         border-radius: 14px;
     }
     .-works li[name="work"] div[name="work-description"] {
+    }
+    .-works li[name="work"] div[name="work-links"] {
+        display: flex;
+        margin-top: 1rem;
+    }
+    .-works li[name="work"] div[name="work-links"] button {
+        height: auto;   /*默认样式固定的button高度导致border增大时文字不垂直局中*/
+        margin-right: 1rem;
+        border: 4px solid white;
+        flex-grow: 1;
     }
     .-works li[name="work"] div[name="separate-line"] {
         width: 80%;

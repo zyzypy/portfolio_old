@@ -54,9 +54,11 @@
                 </div>
                 <div name="works" class="container">
                     <ul class="">
-                        <li name="work" class="columns is-vcentered">
-                            <div name="work-illustration" class="column is-two-fifths-desktop-only"><img alt="项目封面图" :src="activeCatalog.illustration"></div>
-                            <div name="work-description" class="column is-three-fifths-desktop-only">
+                        <li name="work" class="columns is-vcentered"
+
+                        >
+                            <div name="work-cover" class="column is-two-fifths-desktop-only"><img alt="项目封面图" :src="activeCatalog.illustration"></div>
+                            <div name="work-brief" class="column is-three-fifths-desktop-only">
                                 <h1 class="is-size-2 has-text-weight-semibold">xxx项目</h1>
                                 <h2 class="is-size-5"><b>语言: </b>html,python</h2>
                                 <h2 class="is-size-5"><b>框架: </b></h2>
@@ -91,7 +93,7 @@
             return {
                 // 子目录激活状态
                 isActiveIndex: 0,
-                // 目录信息维护
+                // 目录信息维护  'All Backend UI&UX Frontend Server Hobbies'
                 catalogs: [
                     {
                         key: 'All',
@@ -170,7 +172,34 @@
                                     `
                     }
                 ],
-                separatorSrc: require('../assets/svgs/separator.svg')
+                separatorSrc: require('../assets/svgs/separator.svg'),
+                works: [
+                    {
+                        /* 维护
+                            封面图 assets/images下 或网址
+                            h2关键字   4组左右
+                            brief     50-200字
+                            links按钮组   1-4个
+                         */
+                        cover: require('../assets/images/cubes.gif'),
+                        h1: '个人作品页面',
+                        h2s: [
+                            { key: '语言', content: 'html/css/js, nodejs'},
+                            { key: '框架', content: 'Vue全家桶(不含vuex), Buefy, Bulma'},
+                            { key: '分类', content: ['Frontend', 'UI&UX', 'Server']},
+                            // { key: '特点', content: 'UI设计, 动效, 交互'},
+                        ],
+                        brief: `想做一个个人门户页面，整理作品。技术上，一个简单页面使用传统的html+bootstrap即可，有美观的模板可以套用，
+                                但vue已十分流行，想练习vue工程化开发；
+                                美术上，比较了十种vue生态的UI框架，由于组件性质 很难看到成熟美观明显出自设计师之手的模板，最终选择尝鲜Buefy库，
+                                这个库的流行度大约排同类第四，国内一般是elementUI和iview
+                             `,
+                        links: [
+                            { key: '在线Demo', link: 'http://'},
+                            { key: '说明', link: 'http://'}
+                        ]
+                    }
+                ]
             }
         },
         methods: {
@@ -276,16 +305,16 @@
         border-bottom: 2px solid rgba(255,255,255,0.1); /* 分割线 */
         /*align-items: center;  flex导致的缩放比较影响图片效果  */
     }
-    .-works li[name="work"] div[name="work-illustration"] {
+    .-works li[name="work"] div[name="work-cover"] {
         flex-shrink: 0;
     }
-    .-works li[name="work"] div[name="work-illustration"] img{
+    .-works li[name="work"] div[name="work-cover"] img{
         height: 80%;
         max-height: 20rem; /* 手机布局 图片宽度100%防止过大 */
         max-width: 30rem;
         border-radius: 14px;
     }
-    .-works li[name="work"] div[name="work-description"] {
+    .-works li[name="work"] div[name="work-brief"] {
     }
     .-works li[name="work"] div[name="work-links"] {
         display: flex;

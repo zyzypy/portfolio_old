@@ -14,7 +14,9 @@
                         :class="{'-active is-primary': index===isActiveIndex}"
                         @click="changeCatelogFocus(index, item.key, $event)"
                     >
-                        <a href="#" class="is-center">
+                        <!-- 这里采用事件方法返回过滤列表，也可以用动态路由和子组件实现功能 -->
+                        <!-- 不要href="#"导致页面scrollTop 0 -->
+                        <a href="javascript: void(0);" class="is-center">
                             <b-icon
                                 :icon="item.icon"
                                 size="is-small"
@@ -48,27 +50,31 @@
         <section id="s_works" class="-works -gradientbg">
             <div name="curved-separator"><img :src=separatorSrc class="-separator"></div>
             <div class="container is-centered has-text-white-ter">
-                <div name="catalog" class="is-center has-text-centered is-size-2">
+                <!-- 正在激活的子目录 -->
+                <div name="works-active-catalog" class="is-center has-text-centered is-size-2">
                     <b-icon :icon="activeCatalog.icon" size="is-medium"></b-icon>
                     <span>{{activeCatalog.key}}</span>
                 </div>
-                <div name="works" class="container">
+
+                <!-- 作品列表 -->
+                <div id="works" name="works" ref="works" class="container">
                     <ul class="">
                         <li name="work" class="columns is-vcentered"
-
+                            v-for="(work, index) in works"
+                            :key="index"
                         >
-                            <div name="work-cover" class="column is-two-fifths-desktop-only"><img alt="项目封面图" :src="activeCatalog.illustration"></div>
+                            <div name="work-cover" class="column is-two-fifths-desktop-only"><img alt="项目封面图" :src="work.cover"></div>
                             <div name="work-brief" class="column is-three-fifths-desktop-only">
-                                <h1 class="is-size-2 has-text-weight-semibold">xxx项目</h1>
-                                <h2 class="is-size-5"><b>语言: </b>html,python</h2>
-                                <h2 class="is-size-5"><b>框架: </b></h2>
-                                <h2 class="is-size-5"><b>分类: </b></h2>
-                                <h2 class="is-size-5"><b>关键字: </b></h2>
-                                <h2 class="is-size-5"><b>场景: </b></h2>
-                                <p class="is-size-5">简要介绍简短一段介绍啦啦啦啦啦啦</p>
+                                <h1 class="is-size-2 has-text-weight-semibold">{{ work.title }}</h1>
+                                <h2 class="is-size-5" v-for="attr in work.attributes" :key="attr.key"><b>{{ attr.key }}: &nbsp;</b>{{ attr.content }}</h2>
+                                <p class="is-size-6">{{ work.brief }}</p>
                                 <div name="work-links">
-                                    <b-button type="is-light" outlined size="is-medium" tag="button" href="#" target="_blank">在线演示</b-button>
-                                    <b-button type="is-light" outlined size="is-medium" tag="button" href="#" target="_blank">在线演示</b-button>
+                                    <b-button type="is-light" outlined size="is-medium" tag="button"
+                                              v-for="link in work.links" :key="link.key"
+                                              :href="link.link" target="_blank"
+                                    >
+                                        {{ link.key }}
+                                    </b-button>
                                 </div>
                             </div>
                         </li>
@@ -181,22 +187,20 @@
                             brief     50-200字
                             links按钮组   1-4个
                          */
+                        ownCatalog: ['Frontend', 'UI&UX', 'Server'],
                         cover: require('../assets/images/cubes.gif'),
-                        h1: '个人作品页面',
-                        h2s: [
+                        title: '个人作品页面',
+                        attributes: [
                             { key: '语言', content: 'html/css/js, nodejs'},
                             { key: '框架', content: 'Vue全家桶(不含vuex), Buefy, Bulma'},
-                            { key: '分类', content: ['Frontend', 'UI&UX', 'Server']},
-                            // { key: '特点', content: 'UI设计, 动效, 交互'},
+                            { key: '分类', content: '前端, UI, 部署'},
+                            { key: '场景', content: 'H5单页,一般性网站、个人网站、企业官网'},
                         ],
-                        brief: `想做一个个人门户页面，整理作品。技术上，一个简单页面使用传统的html+bootstrap即可，有美观的模板可以套用，
-                                但vue已十分流行，想练习vue工程化开发；
-                                美术上，比较了十种vue生态的UI框架，由于组件性质 很难看到成熟美观明显出自设计师之手的模板，最终选择尝鲜Buefy库，
-                                这个库的流行度大约排同类第四，国内一般是elementUI和iview
+                        brief: `基于Vue、尝鲜Buefy开发的静态页面网站，追求美观。得益于vue，更易于扩展开发和维护，并具备交互能力。仿照自工程师yandev的网站设计图制作。
                              `,
                         links: [
                             { key: '在线Demo', link: 'http://'},
-                            { key: '说明', link: 'http://'}
+                            { key: '详细说明', link: 'http://'}
                         ]
                     }
                 ]
@@ -206,6 +210,15 @@
             // 点击子目录，更改样式和调出所属目录作品
             changeCatelogFocus(index) {
                 this.isActiveIndex = index
+                console.log(document.body.scrollTop)
+                // this.$nextTick(() => {
+                //     console.log(111)
+                //     this.$refs.works.scrollTo(0, 400);})
+                document.body.scrollTop = 600
+                // document.documentElement.scrollTop = 1300;
+                // document.getElementById("works").scrollIntoView();
+                console.log(document.body.scrollTop)
+
             }
         },
         computed: {
@@ -268,7 +281,7 @@
     /* 子目录对应的描述图片和文字 */
     .-desc.container {
         width: 80%;
-        /*padding: ;*/
+        height: 15rem;
         margin-top: 3rem;
     }
     .-desc [name='illustration'] {
@@ -286,7 +299,7 @@
     .-works .-separator {
         transform: scale(1.1, 1) translateY(-2px);
     }
-    .-works div[name="catalog"] span {
+    .-works div[name="works-active-catalog"] span {
         margin-left: 1rem;
     }
     .-works div[name="works"] {
@@ -296,8 +309,8 @@
     }
     .-works ul {
     }
+    /* 一个作品 */
     .-works li[name="work"] {
-        /* 一个作品 */
         width: 100%;
         /*height: 20rem; !* 文字可能多可能少，定死图片高，li不限制 *!*/
         margin: 0;
@@ -323,7 +336,7 @@
     .-works li[name="work"] div[name="work-links"] button {
         height: auto;   /*默认样式固定的button高度导致border增大时文字不垂直局中*/
         margin-right: 1rem;
-        border: 4px solid white;
+        border: 2px solid white;
         flex-grow: 1;
     }
     .-works li[name="work"] div[name="separate-line"] {

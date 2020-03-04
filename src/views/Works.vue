@@ -57,7 +57,7 @@
                 </div>
 
                 <!-- 作品列表 -->
-                <div id="works" name="works" ref="works" class="container">
+                <div id="works" name="works" class="container">
                     <ul class="">
                         <li name="work" class="columns is-vcentered"
                             v-for="(work, index) in filteredWorks"
@@ -79,9 +79,27 @@
                             </div>
                         </li>
                     </ul>
+
+
                 </div>
             </div>
         </section>
+
+        <section id="s_footer">
+            <div class="container -footer">
+                <div name="single-wave-separator">
+                    <svg class="-animated" viewBox="0 0 7323 300" >
+                        <path d="M1213 35c794 12 1123 82 1963 87s1667-93 2647-96 1325 57 1499 86c2 1 0 194 0 194H0V74c-1-25 419-51 1213-39z"
+                              fill="#fff"></path>
+                    </svg>
+                </div>
+                <div>
+                    <a href="#" target="_blank">&copy;2020 杨铮  备案号12340000000</a>
+                    <a href="#" target="_blank">powerby  imitate YanDev's style </a>
+                </div>
+            </div>
+        </section>
+
 
     </div>
 </template>
@@ -199,6 +217,7 @@
     .-works {
         height: auto;
         margin-top: 7rem;
+        padding-bottom: 10rem;
     }
     .-works.-gradientbg {
         background-image: linear-gradient(45deg, #43CBFF 5%, #9708CC 95%);
@@ -251,4 +270,38 @@
         border-top: 1px solid rgba(100,100,100,0.5);
         border-bottom: 2px solid rgba(0,0,0,0.5);
     }
+
+
+    /* 尾部 */
+    /* 作品列表结束时 动态底边
+        svg图片来自原作者 思路：svg曲线缩放调整平缓程度，慢速左右平移动，遮盖背景。
+        我的html结构如果svg在work中即使绝对定位，100%宽度仍然限制在work的container宽度中，所以写到footer中
+     */
+    .-footer.container {
+        position: relative;
+        height: 300px;
+    }
+    .-footer div[name="single-wave-separator"] {
+        position: absolute;
+        z-index: 0;
+        width: 700%; /*7323*/
+        height: 200px;
+        top: -200px;
+        left: -1000px;
+        overflow: hidden;
+    }
+    .-footer div[name="single-wave-separator"] .-animated {
+        animation: separatorAnimation 30s ease-in-out infinite;
+    }
+    @keyframes separatorAnimation {
+        0% {
+            -webkit-transform:translateX(-25%);
+            transform:translateX(-25%)
+        } 50% {
+            -webkit-transform:translateX(0);
+            transform:translateX(0)
+        }to{
+            -webkit-transform:translateX(-25%);
+            transform:translateX(-25%)}
+        }
 </style>

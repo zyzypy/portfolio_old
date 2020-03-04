@@ -60,7 +60,7 @@
                 <div id="works" name="works" ref="works" class="container">
                     <ul class="">
                         <li name="work" class="columns is-vcentered"
-                            v-for="(work, index) in works"
+                            v-for="(work, index) in filteredWorks"
                             :key="index"
                         >
                             <div name="work-cover" class="column is-two-fifths-desktop-only"><img alt="项目封面图" :src="work.cover"></div>
@@ -202,6 +202,23 @@
                             { key: '在线Demo', link: 'http://'},
                             { key: '详细说明', link: 'http://'}
                         ]
+                    },{
+                        //test2
+                        ownCatalog: ['Frontend'],
+                        cover: require('../assets/images/cubes.gif'),
+                        title: 'xxx项目-2',
+                        attributes: [
+                            { key: '语言', content: 'html/css/js, nodejs'},
+                            { key: '框架', content: 'Vue全家桶(不含vuex), Buefy, Bulma'},
+                            { key: '分类', content: '前端, UI, 部署'},
+                            { key: '场景', content: 'H5单页,一般性网站、个人网站、企业官网'},
+                        ],
+                        brief: `基于Vue、尝鲜Buefy开发的静态页面网站，追求美观。得益于vue，更易于扩展开发和维护，并具备交互能力。仿照自工程师yandev的网站设计图制作。
+                             `,
+                        links: [
+                            { key: '在线Demo', link: 'http://'},
+                            { key: '详细说明', link: 'http://'}
+                        ]
                     }
                 ]
             }
@@ -210,21 +227,27 @@
             // 点击子目录，更改样式和调出所属目录作品
             changeCatelogFocus(index) {
                 this.isActiveIndex = index
-                console.log(document.body.scrollTop)
-                // this.$nextTick(() => {
-                //     console.log(111)
-                //     this.$refs.works.scrollTo(0, 400);})
-                document.body.scrollTop = 600
-                // document.documentElement.scrollTop = 1300;
-                // document.getElementById("works").scrollIntoView();
-                console.log(document.body.scrollTop)
-
             }
         },
         computed: {
             // 点击子目录时带出插图和描述。v-for v-if连用可以办到但vue建议计算属性返回过滤数组
             activeCatalog: function() {
                 return this.catalogs[this.isActiveIndex]
+            },
+            // 目录激活时带出其下作品
+            filteredWorks: function () {
+                let filteredWorks
+                let activeCatalogKey = this.catalogs[this.isActiveIndex].key
+                if (activeCatalogKey === 'All') {
+                    filteredWorks = this.works
+                } else {
+                    filteredWorks = this.works.filter(function (work) {
+                        if (work.ownCatalog.indexOf(activeCatalogKey)===0){  /*js中的in跟python不同，判断key不能用于数组*/
+                            return work
+                        }
+                    })
+                }
+                return filteredWorks
             }
         }
     }

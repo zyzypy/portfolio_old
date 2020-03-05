@@ -79,25 +79,30 @@
                             </div>
                         </li>
                     </ul>
-
-
                 </div>
             </div>
         </section>
 
-        <section id="s_footer">
-            <div class="container -footer">
+        <section id="s_single_wave_separator">
+            <div class="container -separator">
                 <div name="single-wave-separator">
                     <svg class="-animated" viewBox="0 0 7323 300" >
                         <path d="M1213 35c794 12 1123 82 1963 87s1667-93 2647-96 1325 57 1499 86c2 1 0 194 0 194H0V74c-1-25 419-51 1213-39z"
                               fill="#fff"></path>
                     </svg>
                 </div>
-                <div>
-                    <a href="#" target="_blank">&copy;2020 杨铮  备案号12340000000</a>
-                    <a href="#" target="_blank">powerby  imitate YanDev's style </a>
-                </div>
             </div>
+        </section>
+
+        <section id="s_footer">
+            <footer class="footer -footer">
+                <div name="padding-height"></div>
+                <div class="content has-text-centered">
+                    <p>&copy;2020 YangZheng, All rights reserved.</p>
+                    <p>豫ICP备16021043号-2</p>
+                    <p>Powered By Vue Buefy, Imitate YanDev's style.</p>
+                </div>
+            </footer>
         </section>
 
 
@@ -272,16 +277,15 @@
     }
 
 
-    /* 尾部 */
-    /* 作品列表结束时 动态底边
-        svg图片来自原作者 思路：svg曲线缩放调整平缓程度，慢速左右平移动，遮盖背景。
+    /* 作品列表结束下面的 动态底边 */
+    /*  svg图片来自原作者 思路：svg曲线缩放调整平缓程度，慢速左右平移动，遮盖背景。
         我的html结构如果svg在work中即使绝对定位，100%宽度仍然限制在work的container宽度中，所以写到footer中
      */
-    .-footer.container {
+    .-separator.container {
         position: relative;
-        height: 300px;
+        height: 0px;
     }
-    .-footer div[name="single-wave-separator"] {
+    .-separator div[name="single-wave-separator"] {
         position: absolute;
         z-index: 0;
         width: 700%; /*7323*/
@@ -290,7 +294,7 @@
         left: -1000px;
         overflow: hidden;
     }
-    .-footer div[name="single-wave-separator"] .-animated {
+    .-separator div[name="single-wave-separator"] .-animated {
         animation: separatorAnimation 30s ease-in-out infinite;
     }
     @keyframes separatorAnimation {
@@ -304,4 +308,19 @@
             -webkit-transform:translateX(-25%);
             transform:translateX(-25%)}
         }
+
+
+    /* 页脚 */
+    .-footer {
+        background-color: white;
+        padding-bottom: 1rem;
+    }
+    .-footer div[name="padding-height"] {
+        height: 200px;
+    }
+    .-footer div[name="content"] {
+    }
+    .-footer a, a:hover {
+        color: black;
+    }
 </style>

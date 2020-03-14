@@ -99,7 +99,7 @@
                 <div name="padding-height"></div>
                 <div class="content has-text-centered">
                     <p>&copy;2020 YangZheng, All rights reserved.</p>
-                    <p>豫ICP备16021043号-2</p>
+                    <p><a href="http://www.beian.miit.gov.cn/" class="has-text-grey-dark">豫ICP备16021043号-2</a></p>
                     <p>Powered By Vue Buefy, Imitate YanDev's style.</p>
                 </div>
             </footer>

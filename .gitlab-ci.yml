@@ -1,0 +1,22 @@
+image: node:latest
+
+#cache:
+#  paths:
+#    - node_modules/
+#
+#before_script:
+#  - npm install
+
+pages:
+  stage: deploy
+  script:
+    - npm install
+    - npm run build
+  cache:
+    paths:
+      - node_modules/
+  artifacts:
+    paths:
+      - dist
+  only:
+    - master

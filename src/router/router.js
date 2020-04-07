@@ -31,6 +31,7 @@ const routes = [
 ]
 
 const router = new VueRouter({
+  mode: 'history',  // 需要web服务器如nginx配置支持
   routes
 })
 

@@ -22,6 +22,10 @@ const routes = [
     path: '/works',
     name: 'Works',
     component: () => import('../views/Works.vue')
+  },{
+    path: '/works_detail/my_nginx',
+    name: 'WorksDetailMyNginx',
+    component: () => import('../views/works_detail/my_nginx/MyNginx.vue')
   },
   // {
   //   path: '/test',

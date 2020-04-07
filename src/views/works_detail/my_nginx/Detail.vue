@@ -5,7 +5,7 @@
 </template>
 
 <script>
-    import Post from './my_nginx.md'
+    import Post from './introduction.md'
 
     export default {
         name: "WorkDetailMyNginx",

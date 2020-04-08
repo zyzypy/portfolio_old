@@ -16,4 +16,4 @@ cnpm i  vue-loader vue-template-compiler -D
 插件翻译成的html不带class无法应用buefy的样式，需要再装一个样式。
 cnpm i github-markdown-css -D  
 
-最终效果见 src/views/details/
+说明信息维护 src/info_maintain

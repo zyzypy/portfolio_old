@@ -5,10 +5,10 @@
 </template>
 
 <script>
-    import Post from './introduction.md'
+    import Post from '@/info_maintain/my_goaccess.md'
 
     export default {
-        name: "WorkDetailMyNginx",
+        name: "WorkDetailMyGoaccess",
         components: {
            Post
         }

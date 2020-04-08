@@ -23,10 +23,18 @@ const routes = [
     name: 'Works',
     component: () => import('../views/Works.vue')
   },
+  // ======== works_detail ==========
+  // 每个作品详情页设计可能不一样，公共部分很少只有头部，暂时不做成组件、路由嵌套，那样反而麻烦。所以写成固定路由。
+  // --------------------------------
   {
     path: '/works_detail/my_nginx',
     name: 'WorksDetailMyNginx',
-    component: () => import('../views/works_detail/my_nginx/Detail.vue')
+    component: () => import('../views/works_detail/MyNginx.vue')
+  },
+  {
+    path: '/works_detail/my_goaccess',
+    name: 'WorksDetailMyGoaccess',
+    component: () => import('../views/works_detail/MyGoaccess.vue')
   },
   // {
   //   path: '/test',

@@ -1,11 +1,13 @@
-// 维护数据  作品页分类catalogs，作品列表works
+// 1.==========作品列表页上部的子目录 catalogs======
+// 种类 All\Backend\UI&UX\Frontend\Server\Hobbies
+// 作品列表维护在下面works常量
 export const catalogs = [
     {
         key: 'All',
         name: '所有',
         icon: 'apps',
         // 静态文件路径会被编译，绑定src时不能用本地路径,使用require
-        // 起名选择困难症😂 一篇图形近义词的文章 https://blog.csdn.net/u010584319/article/details/82704889
+        // 起名选择困难症😂 一篇关于'图形'近义词的文章 https://blog.csdn.net/u010584319/article/details/82704889
         // 插图来自dribbble
         illustration: require('../assets/images/cubes.gif'),
         introduce: `我已经投身软件行业七年<br>
@@ -79,18 +81,44 @@ export const catalogs = [
 ]
 
 
+
+// 2.==========作品列表 单个作品概要 works================================
 export const works =
     [
         {
             /* 维护
-                封面图 assets/images下 或网址
+                所属目录    ['','']
+                排序优先级  0-100  0最高
+                封面图     assets/images下或网址
                 h2关键字   4组左右
                 brief     50-200字
                 links按钮组   1-4个
              */
-            ownCatalog: ['Frontend', 'UI&UX', 'Server'],
+
+            // my_goaccess
+            ownCatalog: ['Server'],
+            priority: 70,
+            cover: require('../assets/images/works_detail/my_goaccess/cover.png'),
+            title: 'GoAccess日志分析',
+            attributes: [
+                {key: '语言', content: 'C'},
+                {key: '框架', content: ''},
+                {key: '关键字', content: '开源自建, 部署, 日志分析'},
+                {key: '场景', content: '轻量级、数据自维护、命令行或可视化, 的日志分析软件。'},
+            ],
+            brief: `网站访问量pv、独立访客uv，我的网站有多少人访问？是网站运营者关注的数据。同类工具不少，文章将会分析百度统计、goaccess、ELK三者场景的区别。
+                             `,
+            links: [
+                {key: '在线Demo', link: 'http://goaccess.1owo.com'},
+                {key: '详细说明', link: '/works_detail/my_goaccess'}
+            ]
+        },
+        {
+            //test2
+            ownCatalog: ['Frontend'],
+            priority: 50,
             cover: require('../assets/images/cubes.gif'),
-            title: '个人作品页面',
+            title: 'xxx项目-2',
             attributes: [
                 {key: '语言', content: 'html/css/js, nodejs'},
                 {key: '框架', content: 'Vue全家桶(不含vuex), Buefy, Bulma'},
@@ -98,14 +126,16 @@ export const works =
                 {key: '场景', content: 'H5单页,一般性网站、个人网站、企业官网'},
             ],
             brief: `基于Vue、尝鲜Buefy开发的静态页面网站，追求美观。得益于vue，更易于扩展开发和维护，并具备交互能力。仿照自工程师yandev的网站设计图制作。
-                             `,
+                                         `,
             links: [
                 {key: '在线Demo', link: 'http://'},
                 {key: '详细说明', link: 'http://'}
             ]
-        }, {
-            //test2
+        },
+        {
+            // test
             ownCatalog: ['Frontend'],
+            priority: 50,
             cover: require('../assets/images/cubes.gif'),
             title: 'xxx项目-2',
             attributes: [

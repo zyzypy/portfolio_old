@@ -5,7 +5,7 @@
         <section class="hero is-medium is-primary -gradient-bg">
             <!-- Hero head: will stick at the top -->
             <div class="hero-head">
-                <!-- buefy v0.8.10 navbar组件存在没有fixed-top属性切换路由报vue warn remove的一个错误，加上后首次进入首页无背景色 -->
+                <!-- (新版本已修复)buefy v0.8.10 navbar组件存在没有fixed-top属性切换路由报vue warn remove的一个错误，加上后首次进入首页无背景色 -->
                 <b-navbar type="is-primary" class="is-primary -nav-gradient-bg" fixed-top>
                     <template slot="brand">
                         <b-navbar-item tag="router-link" :to="{ path: '/' }">

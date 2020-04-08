@@ -69,12 +69,13 @@
                                 <h2 class="is-size-5" v-for="attr in work.attributes" :key="attr.key"><b>{{ attr.key }}: &nbsp;</b>{{ attr.content }}</h2>
                                 <p class="is-size-6">{{ work.brief }}</p>
                                 <div name="work-links">
-                                    <b-button type="is-light" outlined size="is-medium" tag="button"
-                                              v-for="link in work.links" :key="link.key"
-                                              :href="link.link" target="_blank"
+                                    <a v-for="link in work.links" :key="link.key"
+                                       :href="link.link" target="_blank"
                                     >
-                                        {{ link.key }}
-                                    </b-button>
+                                        <b-button type="is-light" outlined size="is-medium" tag="button">
+                                            {{ link.key }}
+                                        </b-button>
+                                    </a>
                                 </div>
                             </div>
                         </li>

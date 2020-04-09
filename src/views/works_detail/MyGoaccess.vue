@@ -5,7 +5,7 @@
 </template>
 
 <script>
-    import Post from '@/info_maintain/my_goaccess.md'
+    import Post from '@/info_maintain/my_goaccess/my_goaccess.md'
 
     export default {
         name: "WorkDetailMyGoaccess",

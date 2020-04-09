@@ -96,16 +96,7 @@
             </div>
         </section>
 
-        <section id="s_footer">
-            <footer class="footer -footer">
-                <div name="padding-height"></div>
-                <div class="content has-text-centered">
-                    <p>&copy;2020 YangZheng, All rights reserved.</p>
-                    <p><a href="http://www.beian.miit.gov.cn/" class="has-text-grey-dark">豫ICP备16021043号-2</a></p>
-                    <p>Powered By Vue Buefy, Imitate YanDev's style.</p>
-                </div>
-            </footer>
-        </section>
+        <Footer></Footer>
 
 
     </div>
@@ -114,12 +105,14 @@
 <script>
     // @ is an alias to /src
     import Header from '@/components/Header.vue'
+    import Footer from '@/components/Footer.vue'
     import {catalogs, works} from '@/info_maintain/works.js'
 
     export default {
         name: 'Works',
         components: {
-            Header
+            Header,
+            Footer
         },
         data: function () {
             return {
@@ -266,11 +259,18 @@
         display: flex;
         margin-top: 1rem;
     }
+    .-works li[name="work"] div[name="work-links"] a {
+        margin-right: 1rem;
+        flex-grow: 1;
+        flex-shrink: 0;
+        flex-basis: 40%;  /*item定宽，flex-grow虽然扩展但受item内内容影响*/
+    }
     .-works li[name="work"] div[name="work-links"] button {
-        height: auto;   /*默认样式固定的button高度导致border增大时文字不垂直局中*/
+        height: auto;   /*默认样式固定的button高度导致border增大时文字不垂直局中,覆盖掉*/
+        width: 100%;
         margin-right: 1rem;
         border: 2px solid white;
-        flex-grow: 1;
+
     }
     .-works li[name="work"] div[name="separate-line"] {
         width: 80%;
@@ -311,18 +311,4 @@
             transform:translateX(-25%)}
         }
 
-
-    /* 页脚 */
-    .-footer {
-        background-color: white;
-        padding-bottom: 1rem;
-    }
-    .-footer div[name="padding-height"] {
-        height: 200px;
-    }
-    .-footer div[name="content"] {
-    }
-    .-footer a, a:hover {
-        color: black;
-    }
 </style>

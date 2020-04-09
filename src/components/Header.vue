@@ -9,10 +9,11 @@
                 <b-navbar type="is-primary" class="is-primary -nav-gradient-bg" fixed-top>
                     <template slot="brand">
                         <b-navbar-item tag="router-link" :to="{ path: '/' }">
-                            <img
-                                    src="https://raw.githubusercontent.com/buefy/buefy/dev/static/img/buefy-logo.png"
-                                    alt="aaa"
-                            >
+                            <h2 class="is-size-4">PORTFOLIO</h2>
+                            <!-- <img -->
+                            <!--    src="../assets/logo.png" -->
+                            <!--    alt="aaa" -->
+                            <!-- > -->
                         </b-navbar-item>
                     </template>
                     <template slot="end">

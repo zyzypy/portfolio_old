@@ -98,7 +98,7 @@ export const works =
             // my_goaccess
             ownCatalog: ['Server'],
             priority: 70,
-            cover: require('../assets/images/works_detail/my_goaccess/cover.png'),
+            cover: require('./my_goaccess/cover.png'),
             title: 'GoAccess日志分析',
             attributes: [
                 {key: '语言', content: 'C'},

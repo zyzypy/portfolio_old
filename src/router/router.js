@@ -24,17 +24,12 @@ const routes = [
     component: () => import('../views/Works.vue')
   },
   // ======== works_detail ==========
-  // 每个作品详情页设计可能不一样，公共部分很少只有头部，暂时不做成组件、路由嵌套，那样反而麻烦。所以写成固定路由。
-  // --------------------------------
+  // 动态路由 https://router.vuejs.org/zh/guide/essentials/dynamic-matching.html   嵌套路由适用组件嵌套情况
   {
-    path: '/works_detail/my_nginx',
-    name: 'WorksDetailMyNginx',
-    component: () => import('../views/works_detail/MyNginx.vue')
-  },
-  {
-    path: '/works_detail/my_goaccess',
-    name: 'WorksDetailMyGoaccess',
-    component: () => import('../views/works_detail/MyGoaccess.vue')
+    // eg.  /works_detail/my_nginx
+    path: '/works_detail/:work_name',
+    name: 'WorksDetail',
+    component: () => import('../views/WorksDetail.vue'),
   },
   // {
   //   path: '/test',

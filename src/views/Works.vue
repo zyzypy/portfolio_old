@@ -63,6 +63,7 @@
                             v-for="(work, index) in filteredWorks"
                             :key="index"
                         >
+                            <div v-show="false">排序{{ work.priority || 50 }}</div>
                             <div name="work-cover" class="column is-two-fifths-desktop-only"><img alt="项目封面图" :src="work.cover"></div>
                             <div name="work-brief" class="column is-three-fifths-desktop-only">
                                 <h1 class="is-size-2 has-text-weight-semibold">{{ work.title }}</h1>

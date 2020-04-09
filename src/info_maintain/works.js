@@ -102,12 +102,12 @@ export const works =
             title: 'GoAccess日志分析',
             attributes: [
                 {key: '语言', content: 'C'},
-                {key: '框架', content: ''},
+                {key: '框架', content: '无'},
                 {key: '关键字', content: '开源自建, 部署, 日志分析'},
                 {key: '场景', content: '轻量级、数据自维护、命令行或可视化, 的日志分析软件。'},
             ],
             brief: `网站访问量pv、独立访客uv，我的网站有多少人访问？是网站运营者关注的数据。同类工具不少，文章将会分析百度统计、goaccess、ELK三者场景的区别。
-                             `,
+                     `,
             links: [
                 {key: '在线Demo', link: 'http://goaccess.1owo.com'},
                 {key: '详细说明', link: '/works_detail/my_goaccess'}

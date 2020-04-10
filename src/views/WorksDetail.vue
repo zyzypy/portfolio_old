@@ -5,8 +5,8 @@
             <template v-slot:subtitle>{{ work_name }}</template>
         </HeaderSimple>
 
-        <section class="container">
-            <div name="markdown-wrapper" class="markdown-body">
+        <section name="markdown-wrapper" class="container">
+            <div class="markdown-body">
                 <Post></Post>
             </div>
         </section>
@@ -39,4 +39,10 @@
 
 <style scoped>
 @import '~@/assets/css/github-markdown.css';
+/* custom 原样式ul没有list-style-type ,在大约260行左右添加 */
+
+section[name='markdown-wrapper'] {
+    width: 1000px;
+    max-width: 90%;
+}
 </style>

@@ -252,6 +252,7 @@
         max-height: 20rem; /* 手机布局 图片宽度100%防止过大 */
         max-width: 30rem;
         border-radius: 14px;
+        object-fit: cover;
     }
     .-works li[name="work"] div[name="work-brief"] {
     }

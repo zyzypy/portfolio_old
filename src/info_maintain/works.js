@@ -83,18 +83,37 @@ export const catalogs = [
 
 
 // 2.==========作品列表 单个作品概要 works================================
+/* 维护
+    所属目录    ['','']
+    排序优先级  0-100  0最高
+    封面图     assets/images下或网址  30*20rem
+    h2关键字   4组左右
+    brief     50-200字
+    links按钮组   1-4个   详细说明路由地址与src/info_maintain/my_xxx一致
+*/
+
 export const works =
     [
         {
-            /* 维护
-                所属目录    ['','']
-                排序优先级  0-100  0最高
-                封面图     assets/images下或网址
-                h2关键字   4组左右
-                brief     50-200字
-                links按钮组   1-4个
-             */
-
+            // my_gitlab
+            ownCatalog: ['Server'],
+            priority: 65,
+            cover: require('./my_gitlab/cover.png'),
+            title: 'Gitlab服务',
+            attributes: [
+                {key: '语言', content: 'Ruby'},
+                {key: '框架', content: 'rails'},
+                {key: '关键字', content: '开源自建, 部署, 代码版本管理'},
+                {key: '场景', content: '想管理代码又追求安全、自己掌控、访问速度等方面的公司'},
+            ],
+            brief: `gitlab知名度仅次于github, 是公司内部自建git服务的首选方案。功能成熟、UI美观。
+                     `,
+            links: [
+                {key: '在线Demo', link: 'http://gitlab.1owo.com'},
+                {key: '详细说明', link: '/works_detail/my_gitlab'}
+            ]
+        },
+        {
             // my_goaccess
             ownCatalog: ['Server'],
             priority: 70,

@@ -1,9 +1,10 @@
 作品列表信息 works.js中维护
-每一个作品详情说明页面信息 my_app.md 中维护
+说明信息维护 src/info_maintain/my_xxx/
+每一个作品详情说明页面信息 my_app.md 中维护。图片中文名会导致webpack报错。
 
 ---
-
-需求：作品说明,md渲染到vue中。
+关于md渲染细节  
+需求：md渲染到vue中。
 选型：
 - html 说明比较简单，搭配buefy也可以做按钮、tab页、画廊等
 - md转vue组件
@@ -21,4 +22,3 @@ cnpm i  vue-loader vue-template-compiler -D
 插件翻译成的html不带class无法应用buefy的样式，需要再装一个样式。
 cnpm i github-markdown-css -D  
 
-说明信息维护 src/info_maintain

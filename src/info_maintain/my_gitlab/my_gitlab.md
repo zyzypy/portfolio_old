@@ -1,30 +1,35 @@
 自建Gitlab服务
 ===
 ## Demo
-[在线demo](http://gitlab.1owo.com)  
-管理员账户:  
-密码:  
-不想登录的点击首页左下角explore。  
-*仅供学习尝试，不要保存重要代码，服务随时可能停止。*
+[在线demo 访问http://gitlab.1owo.com](http://gitlab.1owo.com)  
+**管理员账户: root**  
+**密码: %6qwerty**  
+
+关于账户:  
+- 因为只是个人测试学习用的自建服务，没有重要数据，所以放出root账户密码，没见过管理后台的可以看下。
+- 普通权限的用户注册非常简单，首页注册表单。用户名随意，密码8位以上，由于没有配置邮箱通知验证功能，邮箱地址随便填写(如test02@1owo.com)也能通过。
+- 不想登录的点击首页左下角explore直接浏览。 
+- 请不要修改root密码，登录不上联系我重置。
+- *仅供学习尝试，不要保存重要代码，服务可能随时停止。*
+
 可以尝试的功能:  
 - git基本操作，推送、克隆
-- git ssh key
+- 配置ssh key
 - 管理员新建普通用户、管理用户、团队。管理员设置在页面左上🔧图标，用户个人设置在右上角头像。
-- CI，gitlab runner
+- CI，gitlab runner，gitlab pages
+
 ## 效果图
 安装
 ![](./images/install1.jpg)
-![](./images/install2.png)
-![](./images/install3.png)
-![](./images/install5.jpg)
-![](./images/install6.jpg)
-初始化
 ![](./images/install7.jpg)
+初始化
 ![](./images/initial1.png)
 效果
 ![](./images/done1.png)
 ![](./images/done2.png)
 ![](./images/done3.png)
+管理员设置
+![](./images/admin.jpg)
 其它配置
 https
 ![](./images/https.png)
@@ -55,7 +60,7 @@ SVN(前些年家家公司必备但经常沦落为文件网盘)所以才有了上
 ## 选型、场景
 - github。最为知名、资源最为丰富、功能成熟，但因为~~众所周知~~服务器比较远的原因，clone速度较慢。
 - gitee。国内知名代码托管平台。
-- gitlab。较为知名、功能成熟、UI美观、重量级。使用Ruby语言、rails框架开发，CE社区版代码开源，支持自建。
+- gitlab。较为知名、功能成熟、UI美观😊、重量级。使用Ruby语言、rails框架开发，CE社区版代码开源，支持自建。
 - Gogs。不太知名、国人项目，轻量级。支持自建。是除gitlab之外的自建选择。
 
 场景：  
@@ -66,9 +71,10 @@ SVN(前些年家家公司必备但经常沦落为文件网盘)所以才有了上
 本文侧重展示效果，技术文章具体参考[todo 有空更新]()，
 内容包含：安装方法选择、捆绑安装包中各软件作用(2015年所在公司技术部率先使用ruby生产开发，稍微了解一点，可惜ruby没火起来😂)、邮件配置、https配置、CI CD配置等。
 
-我尝试过源码、omnibus捆绑安装包、docker三种安装方式。使用omnibus时实现了邮件、https、CICD等配置，
-但捆绑包内多个软件的端口不好管理，服务器主要放其它项目，因此停掉后又开了个docker容器。
-容器方式较为简单，但排错麻烦，因此没有配置邮件、https，仅供尝试下界面。由于gitlab非常占用资源，demo可能随时关闭。
+我尝试过源码、omnibus捆绑安装包、docker三种安装方式。使用omnibus安装时实现了邮件、https、CI等配置，
+但捆绑包内多个软件的端口不好管理，服务器还要放其它项目，因此停掉后又开了个docker容器。
+容器方式较为简单，但gitlab部署不是我的重点关注项目，另排错麻烦，因此暂时没有配置邮件、https，仅供尝试下界面。
+由于gitlab非常占用资源，demo可能随时关闭。
 
 
 

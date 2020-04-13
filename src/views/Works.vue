@@ -249,19 +249,22 @@
     }
     .-works li[name="work"] div[name="work-cover"] img{
         height: 80%;
-        max-height: 20rem; /* 手机布局 图片宽度100%防止过大 */
+        max-height: 20rem; /* 手机端 图片宽度100%防止过大 */
         max-width: 30rem;
         border-radius: 14px;
         object-fit: cover;
     }
     .-works li[name="work"] div[name="work-brief"] {
+        /*max-width: 400px;*/
     }
     .-works li[name="work"] div[name="work-links"] {
         display: flex;
+        flex-wrap: wrap;    /* 按钮2-4个两行 */
         margin-top: 1rem;
     }
     .-works li[name="work"] div[name="work-links"] a {
         margin-right: 1rem;
+        margin-top: 0.5rem;
         flex-grow: 1;
         flex-shrink: 0;
         flex-basis: 40%;  /*item定宽，flex-grow虽然扩展但受item内内容影响*/

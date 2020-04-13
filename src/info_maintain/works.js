@@ -99,8 +99,9 @@ export const works =
             ownCatalog: ['Server'],
             priority: 65,
             cover: require('./my_gitlab/cover.png'),
-            title: 'Gitlab服务',
+            title: 'Gitlab代码版本管理',
             attributes: [
+                {key: '时间', content: '2020-02'},
                 {key: '语言', content: 'Ruby'},
                 {key: '框架', content: 'rails'},
                 {key: '关键字', content: '开源自建, 部署, 代码版本管理'},
@@ -120,6 +121,7 @@ export const works =
             cover: require('./my_goaccess/cover.png'),
             title: 'GoAccess日志分析',
             attributes: [
+                {key: '时间', content: '2020-02'},
                 {key: '语言', content: 'C'},
                 {key: '框架', content: '无'},
                 {key: '关键字', content: '开源自建, 部署, 日志分析'},
@@ -130,6 +132,27 @@ export const works =
             links: [
                 {key: '在线Demo', link: 'http://goaccess.1owo.com'},
                 {key: '详细说明', link: '/works_detail/my_goaccess'}
+            ]
+        },
+        {
+            // my_ngrok
+            ownCatalog: ['Server'],
+            priority: 65,
+            cover: require('./my_ngrok/cover.png'),
+            title: 'Ngrok内网穿透',
+            attributes: [
+                {key: '时间', content: '2018-05'},
+                {key: '语言', content: 'Go'},
+                {key: '关键字', content: '开源自建, 内网穿透, 反向代理'},
+                {key: '场景', content: '在家用宽带、个人电脑上架设服务; 本地便捷调试微信小程序项目。'},
+            ],
+            brief: `Ngrok是go语言、内网穿透领域的代表项目。访问公网ip即可直接访问到家中的个人电脑，方便软件开发调试和架设服务。
+                     `,
+            links: [
+                // vue-cli3 static files   https://cli.vuejs.org/guide/html-and-static-assets.html#html
+                {key: 'Mac/Linux client', link: '/file/my_ngrok/ngrok'},
+                {key: 'Windows client', link: '/file/my_ngrok/ngrok.exe'},
+                {key: 'Demo测试说明', link: '/works_detail/my_ngrok'},
             ]
         },
         {

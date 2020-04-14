@@ -3,8 +3,8 @@ Ngrok内网穿透
 ## Demo测试说明
 1. **客户端下载:**  
 根据自己💻系统下载对应的可执行程序。  
-[MacOS/Linux client](/file/my_ngrok/ngrok)  
-[Windows client](/file/my_ngrok/ngrok.exe)
+[MacOS/Linux client](/static/my_ngrok/ngrok)  
+[Windows client](/static/my_ngrok/ngrok.exe)
 
 2. **客户端配置文件**  
 使用文本编辑工具(如sublime、记事本)或IDE(如pycharm、vscode)新建`ngrok.cfg`配置文件，写入内容:  

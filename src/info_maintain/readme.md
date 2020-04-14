@@ -1,7 +1,11 @@
 作品列表信息 works.js中维护
 说明信息维护 src/info_maintain/my_xxx/
-每一个作品详情说明页面信息 my_app.md 中维护。图片中文名会导致webpack报错。
+静态文件在/public目录下维护。vue-cli3 static files   https://cli.vuejs.org/guide/html-and-static-assets.html#html
 
+可能的报错:
+- 每一个作品详情说明页面信息 my_app.md 中维护。图片中文名会导致webpack报错。
+- vue-markdown-loader  如果md文件中代码块html中有script标签。
+- 
 ---
 关于md渲染细节  
 需求：md渲染到vue中。
@@ -21,4 +25,7 @@ cnpm i vue-markdown-loader -D
 cnpm i  vue-loader vue-template-compiler -D
 插件翻译成的html不带class无法应用buefy的样式，需要再装一个样式。
 cnpm i github-markdown-css -D  
+
+这个库的一些bug：
+
 

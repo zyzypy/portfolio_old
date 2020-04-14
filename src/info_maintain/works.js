@@ -150,9 +150,28 @@ export const works =
                      `,
             links: [
                 // vue-cli3 static files   https://cli.vuejs.org/guide/html-and-static-assets.html#html
-                {key: 'Mac/Linux client', link: '/file/my_ngrok/ngrok'},
-                {key: 'Windows client', link: '/file/my_ngrok/ngrok.exe'},
+                {key: 'Mac/Linux client', link: '/static/my_ngrok/ngrok'},
+                {key: 'Windows client', link: '/static/my_ngrok/ngrok.exe'},
                 {key: 'Demo测试说明', link: '/works_detail/my_ngrok'},
+            ]
+        },
+        {
+            // my_srs
+            ownCatalog: ['Server'],
+            priority: 60,
+            cover: require('./my_srs/cover.jpg'),
+            title: 'SRS直播',
+            attributes: [
+                {key: '时间', content: '2019-10'},
+                {key: '语言', content: 'C++'},
+                {key: '关键字', content: '开源自建, 直播, rtmp/flv/hls协议'},
+                {key: '场景', content: '想了解直播技术的程序员，自建直播服务，视频资源站'},
+            ],
+            brief: `SRS是一款国人开发的基于rtmp协议的流服务器，用于直播。
+                     `,
+            links: [
+                {key: 'Demo测试说明', link: '/works_detail/my_srs'},
+                {key: '客户端', link: 'https://srs.1owo.com/'},
             ]
         },
         {

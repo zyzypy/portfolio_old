@@ -139,6 +139,7 @@
             // 目录激活时带出其下作品
             filteredWorks: function () {
                 let filteredWorks
+                // 根据子目录过滤
                 let activeCatalogKey = this.catalogs[this.isActiveIndex].key
                 if (activeCatalogKey === 'All') {
                     filteredWorks = this.works
@@ -149,6 +150,10 @@
                         }
                     })
                 }
+                // 再根据优先级数字排序
+                filteredWorks = filteredWorks.sort(function compare(a, b){
+                    return a.priority - b.priority
+                })
                 return filteredWorks
             }
         }

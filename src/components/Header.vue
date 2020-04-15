@@ -54,9 +54,11 @@
             <!-- Hero content: will be in the middle -->
             <div class="hero-body">
                 <div class="container has-text-centered fade-enter-active">
+                    <!-- 大标题 -->
                     <h1 class="title is-size-1 has-text-white">
-                        <!-- 高中时练过仿宋字 -->
-                        👋<img src="../assets/fonts/你好我是杨铮_微软仿宋.svg">
+                        👋Hello, I'm YZ!
+                    <!--  虽然应该大胆推广但还是有点招摇。。 -->
+                    <!--  👋<img src="../assets/fonts/你好我是杨铮_微软仿宋.svg"> -->
                     </h1>
                     <h2 class="subtitle is-size-4 has-text-white-lighter "
                         :class="{'-typing-animation': isShowAnimation}"
@@ -254,6 +256,8 @@
 </script>
 
 <style scoped>
+    /*@import "../assets/fonts/Pacifico.ttf";*/
+
     .-nav-gradient-bg {
         background-color: transparent !important;
         background-image: linear-gradient(45deg, rgba(95, 174, 247, 0.95) 5%, rgba(151, 8, 204, 0.95) 95%) !important;
@@ -271,6 +275,16 @@
         padding-bottom: 4rem !important;
     }
 
+    /* 大标题 Hello, I'm YZ */
+    @font-face {
+        font-family: Pacifico;
+        src: url("~@/assets/fonts/Pacifico.ttf");
+    }
+    .hero.is-medium .hero-body h1.title.is-size-1 {
+        font-family: Pacifico, cursive;
+        font-weight: bold;
+        margin-bottom: 2rem;
+    }
     /* 打字特效
        教程思路巧妙 https://www.weiyiqi.net/html/htmlcss/326.html
                   https://www.zhangxinxu.com/wordpress/2018/06/css3-animation-steps-step-start-end/?shrink=1

@@ -95,6 +95,26 @@ export const catalogs = [
 export const works =
     [
         {
+            // my_demo_dashboard
+            ownCatalog: ['Frontend', 'UI&UX'],
+            priority: 80,
+            cover: require('./my_demo_dashboard/cover.png'),
+            title: '后台模板Vuetify',
+            attributes: [
+                {key: '时间', content: '2019-10'},
+                {key: '语言', content: 'nodejs'},
+                {key: '框架', content: 'Vue, Vuetify'},
+                {key: '关键字', content: '后台, 模板, UI'},
+                {key: '场景', content: '开发团队为了提升UI买个漂亮的admin模板'},
+            ],
+            brief: `设计团队creative Tim打磨的前端模板，效果比直接用vue生态的UI插件例如ElementUI、AmazeUI等要漂亮。
+                     `,
+            links: [
+                {key: '在线Demo', link: 'https://demo_dashboard.1owo.com/'},
+                {key: '详细说明', link: '/works_detail/my_demo_dashboard'}
+            ]
+        },
+        {
             // my_gitlab
             ownCatalog: ['Server'],
             priority: 65,
@@ -158,7 +178,7 @@ export const works =
         {
             // my_srs
             ownCatalog: ['Server'],
-            priority: 60,
+            priority: 65,
             cover: require('./my_srs/cover.jpg'),
             title: 'SRS直播',
             attributes: [
@@ -177,7 +197,7 @@ export const works =
         {
             //test2
             ownCatalog: ['Frontend'],
-            priority: 50,
+            priority: 90,
             cover: require('../assets/images/cubes.gif'),
             title: 'xxx项目-2',
             attributes: [
@@ -196,7 +216,7 @@ export const works =
         {
             // test
             ownCatalog: ['Frontend'],
-            priority: 50,
+            priority: 90,
             cover: require('../assets/images/cubes.gif'),
             title: 'xxx项目-2',
             attributes: [

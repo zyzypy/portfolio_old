@@ -40,8 +40,8 @@
                     <template slot="end">
                         <b-navbar-item tag="div">
                             <div class="buttons">
-                                <a class="button is-light" href="#/signin">
-                                    <span>登录</span>
+                                <a class="button is-light is-disabled" href="#">
+                                    <span>开发中...</span>
                                 </a>
                             </div>
                         </b-navbar-item>

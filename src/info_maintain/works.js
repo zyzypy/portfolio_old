@@ -112,7 +112,29 @@ export const works =
                      `,
             links: [
                 {key: '在线Demo', link: 'https://demo_dashboard.1owo.com/'},
-                {key: '详细说明', link: '/works_detail/my_demo_dashboard'}
+                {key: '出售说明', link: '/works_detail/my_demo_dashboard'}
+            ]
+        },
+        {
+            // my_odoo
+            ownCatalog: ['Backend'],
+            priority: 80,
+            cover: require('./my_odoo/cover.png'),
+            title: 'odoo demo',
+            attributes: [
+                {key: '时间', content: '2016-12'},
+                {key: '语言', content: 'Python'},
+                {key: '框架', content: 'odoo'},
+                {key: '关键字', content: '开源自建, ERP, CRM, 财务, 物料, 工作流, 电商'},
+                {key: '场景', content: '用于开发公司任一业务领域的管理系统'},
+            ],
+            brief: `中大型公司内部使用ERP非常普遍，基于Java语言的金蝶、用友、SAP是国内外ERP领域的代表软件。
+                    企业基于这些软件进行二次开发，适应公司财务、物料、人力、电商、工作流等方面业务需求。ERP复杂、开发耗时、核心是公司业务。
+                    Python语言中ERP代表软件是odoo，界面不错，以插件模块思想进行功能扩充，国内小众。
+                     `,
+            links: [
+                {key: '在线Demo', link: 'https://odoo.1owo.com/'},
+                {key: '安利说明', link: '/works_detail/my_odoo'}
             ]
         },
         {

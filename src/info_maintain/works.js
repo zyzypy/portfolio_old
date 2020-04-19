@@ -157,7 +157,7 @@ export const works =
         },
         {
             // my_hexo
-            ownCatalog: ['Backend', 'Frontend', 'Server'],
+            ownCatalog: ['Backend', 'Frontend'],
             priority: 30,
             cover: require('./my_hexo/cover.png'),
             title: '博客',
@@ -217,6 +217,27 @@ export const works =
             links: [
                 {key: '在线Demo', link: 'https://odoo.1owo.com/'},
                 {key: '安利说明', link: '/works_detail/my_odoo'}
+            ]
+        },
+        {
+            // my_proxy_poll
+            ownCatalog: ['Backend'],
+            priority: 90,
+            cover: require('./my_proxy_poll/cover.png'),
+            title: '免费IP代理池',
+            attributes: [
+                {key: '时间', content: '2018-11'},
+                {key: '语言', content: 'Python'},
+                {key: '关键字', content: '开源自建, IP, 代理'},
+                {key: '场景', content: '用于爬虫行业，暴力突破服务器IP黑名单'},
+                {key: '我的看法', content: '爬虫既无web开发有技术、又灰色、不劳而获，对于认为爬虫是python主要领域的风气表示反对。'},
+            ],
+            brief: `爬虫项目为了高效获取数据请求频繁，服务器根据请求头封锁请求频繁的IP。这时就需要'我的电脑➡️代理到其它人的电脑➡️目标网址'，
+                    需要大量'开启http代理服务的别人电脑的ip'伪装成正常请求。代理ip池通常需要购买，平台放出的免费资源可用性极低。
+                    本demo可用性很低，聊胜于无，个人学习爬虫项目时如果ip被封可以临时用一下。
+                     `,
+            links: [
+                {key: 'API说明', link: '/works_detail/my_proxy_poll'}
             ]
         },
         {

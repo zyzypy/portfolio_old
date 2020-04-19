@@ -136,16 +136,17 @@
             activeCatalog: function() {
                 return this.catalogs[this.isActiveIndex]
             },
-            // 目录激活时带出其下作品
+            // 子目录激活时带出其下作品
             filteredWorks: function () {
                 let filteredWorks
-                // 根据子目录过滤
                 let activeCatalogKey = this.catalogs[this.isActiveIndex].key
                 if (activeCatalogKey === 'All') {
+                    // 所有作品
                     filteredWorks = this.works
                 } else {
+                    // 选择子目录时从所有作品中过滤出来
                     filteredWorks = this.works.filter(function (work) {
-                        if (work.ownCatalog.indexOf(activeCatalogKey)===0){  /*js中的in跟python不同，判断key不能用于数组*/
+                        if (work.ownCatalog.indexOf(activeCatalogKey)!==-1){  //js中的in跟python不同，用于判断key不能用于数组
                             return work
                         }
                     })

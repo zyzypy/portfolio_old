@@ -1,5 +1,5 @@
 <template>
-    <div id="work_detail" class="" >
+    <div id="work_detail" class="canaan" >
         <HeaderSimple>
             <template v-slot:title>Work Introduce</template>
             <template v-slot:subtitle>{{ work_name }}</template>
@@ -33,14 +33,14 @@
             HeaderSimple,
             Footer,
         },
-        beforeMount(){
-            this.com_post = ()=>import(`@/info_maintain/${this.work_name}/${this.work_name}.md`)
-        },
         data() {
           return {
               work_name: this.$route.params.work_name,
               com_post: {}
           }
+        },
+        beforeMount(){
+            this.com_post = ()=>import(`@/info_maintain/${this.work_name}/${this.work_name}.md`)
         },
         watch: {
             '$route' (to, from) {

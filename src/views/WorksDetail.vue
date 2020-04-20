@@ -1,5 +1,5 @@
 <template>
-    <div class="">
+    <div id="work_detail" class="" >
         <HeaderSimple>
             <template v-slot:title>Work Introduce</template>
             <template v-slot:subtitle>{{ work_name }}</template>
@@ -26,12 +26,15 @@
 
 
     export default {
-        name: "WorkDetailMyGoaccess",
+        name: "WorkDetail",
         components: {
             // Post: ()=>import('@/info_maintain/my_goaccess/'+this.$route.params.work_name+'.md'),
             // 这时this undefined,应该在实例化后引入路由参数
             HeaderSimple,
             Footer,
+        },
+        beforeMount(){
+            this.com_post = ()=>import(`@/info_maintain/${this.work_name}/${this.work_name}.md`)
         },
         data() {
           return {
@@ -46,9 +49,6 @@
                     this.work_name = to.params.work_name
                 }
             }
-        },
-        beforeMount(){
-            this.com_post = ()=>import(`@/info_maintain/${this.work_name}/${this.work_name}.md`)
         }
     }
 </script>

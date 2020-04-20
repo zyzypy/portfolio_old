@@ -26,16 +26,24 @@ const routes = [
   // ======== works_detail ==========
   // 动态路由 https://router.vuejs.org/zh/guide/essentials/dynamic-matching.html   嵌套路由适用组件嵌套情况
   {
+    // 作品详情，需要markdown文件的
     // eg.  /works_detail/my_nginx
     path: '/works_detail/:work_name',
     name: 'WorksDetail',
     component: () => import('../views/WorksDetail.vue'),
   },
-  // {
-  //   path: '/test',
-  //   name: 'Test',
-  //   component: () => import('../views/Test.vue')
-  // }
+  {
+    // 作品详情，需要视频教程类的
+    // eg.  /works_video/my_python_video_base
+    path: '/works_video/:work_name',
+    name: 'WorksVideo',
+    component: () => import('../views/WorksVideo.vue'),
+  },
+  {
+    path: '/test',
+    name: 'Test',
+    component: () => import('../views/Test.vue')
+  }
 ]
 
 const router = new VueRouter({

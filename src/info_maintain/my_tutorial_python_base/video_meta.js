@@ -6,8 +6,8 @@ export const video_meta = {
     src_base_url: "http://tutorial.1owo.com", //cdn或存储桶基础路径
     episodes: [
         // size Mb  duration H:M:S
-        { key: 1, button: "第一集", name: "安装解释器", size: 300/* Mb*/, duration: '01:30:50' /* H:M:S */, src: "https://tutorial-1252072307.cos.ap-shanghai.myqcloud.com/python_basic/L02%E8%A7%A3%E9%87%8A%E5%99%A8%E5%AE%89%E8%A3%85_v2.mp4"},
-        { key: 2, button: "第二集", name: "变量", size: 300, src: "https://tutorial-1252072307.cos.ap-shanghai.myqcloud.com/python_basic/L03pycharm%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8_v2.mp4"}
+        { key: 1, button: "1P", name: "安装解释器", size: 300/* Mb*/, duration: '01:30:50' /* H:M:S */, src: "https://tutorial-1252072307.cos.ap-shanghai.myqcloud.com/python_basic/L02%E8%A7%A3%E9%87%8A%E5%99%A8%E5%AE%89%E8%A3%85_v2.mp4"},
+        { key: 2, button: "2P", name: "变量", size: 300, src: "https://tutorial-1252072307.cos.ap-shanghai.myqcloud.com/python_basic/L03pycharm%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8_v2.mp4"}
     ],
     // 简介内容有点多，又不想渲染成一段一团。markdown依赖插件，直接维护成html，前端v-html渲染。
     brief: `
@@ -20,7 +20,7 @@ export const video_meta = {
                 在教学过程中，我尽量把我当年初学python的感受和几个班的教学经验带入进去，目标是知其然知其所以然。
             </li>
             <li>良好的音质。因为录制任务公司有奖金，一开心买了个专业级电容麦克风和声卡，想着以后还能录歌录乐器。大夏天关在卧室里、不开空调，录好后剪辑软件里低切掉底噪，改为标准响度，输出200kbps的AAC的音轨。</li>
-            <li>剪辑。基础已讲过几遍，对自己发挥满意。但每小时难免会不小心停顿个10s思路断了，后期剪掉了</li>
+            <li>剪辑。基础已讲过几遍，对自己发挥满意。但每小时难免会不小心停顿个10s思路断了，后期剪掉了。</li>
             <li>整体满意，比较推荐</li>
         </ul>
         <p><b>缺点: </b></p>

@@ -30,15 +30,21 @@ const routes = [
     // eg.  /works_detail/my_nginx
     path: '/works_detail/:work_name',
     name: 'WorksDetail',
-    component: () => import('../views/WorksDetail.vue'),
+    component: () => import('../views/WorksDetail.vue')
   },
   {
     // 作品详情，需要视频教程类的
     // eg.  /works_video/my_python_video_base
     path: '/works_video/:work_name',
     name: 'WorksVideo',
-    component: () => import('../views/WorksVideo.vue'),
+    component: () => import('../views/WorksVideo.vue')
   },
+  {
+    path: '/donate',
+    name: 'Donate',
+    component: () => import('../views/Donate.vue')
+  },
+  // test
   {
     path: '/test',
     name: 'Test',

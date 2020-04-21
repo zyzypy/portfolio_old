@@ -25,14 +25,13 @@
                         <b-button
                                 v-for="(item, index) in video_meta.episodes"
                                 :key="index"
-                                tag="a"
-                                :href="item.src"
+                                @click="switch_episode(item.key)"
 
                                 target="_blank"
                                 type="is-primary"
-                                :class="{'is-outlined': item.key!==current_episode_key}"
+                                :class="{'is-outlined': item.key!==current_episode.key}"
                         >
-                            {{ item.button }}
+                            {{ item.button }} {{ item.name }}
                         </b-button>
                     </div>
                 </div>
@@ -42,7 +41,9 @@
                     <p>大小: {{ current_episode.size }} Mb</p>
                     <p>时长: {{ current_episode.duration }} </p>
                     <p>格式: 1080p mp4 </p>
-                    <p>💰流量费: {{ traffic_fee }}元。(为什么收费🤔？详见👇下方捐赠解释)</p>
+                    <p>💰流量费: {{ traffic_fee }}元。
+                        <router-link :to="{ name: 'Donate' }" target="_blank">(为什么收费🤔？)</router-link>
+                    </p>
                 </div>
                 <div name="breif">
                     <h2 class="is-size-5">介绍</h2>
@@ -52,8 +53,6 @@
                     <h2 class="is-size-5">©️版权</h2>
                     <div v-html="video_meta.license"></div>
                 </div>
-                <hr>
-                捐赠
             </div>
         </section>
 
@@ -97,7 +96,6 @@
                     liveui: true
                 },
                 video_meta: {},
-                current_episode_key: 1,
                 current_episode: {}
             }
         },
@@ -105,14 +103,25 @@
             // 引入视频信息
             this.video_meta = require(`@/info_maintain/${this.work_name}/video_meta.js`).video_meta
             // 默认播放第一集
-            this.playerOptions.sources[0].src = this.video_meta.episodes[0].src
             this.current_episode = this.video_meta.episodes[0]
-            this.current_episode_key = this.current_episode.key
         },
         computed: {
             traffic_fee() {
                 let price = 0.4  // 对象存储 0.45和cdn 0.31的大约平均费用 元/GB
                 return this.current_episode.size /1000 * price
+            },
+
+        },
+        watch: {
+            // 播放器地址跟随当前集。 可以使beforeMount()和switch_episode(key)减少一句赋值代码，增加逻辑独立性。
+            current_episode() {
+                this.playerOptions.sources[0].src = this.current_episode.src
+            }
+        },
+        methods: {
+            // 换集
+            switch_episode(key) {
+                this.current_episode = this.video_meta.episodes[key-1]
             }
         }
 

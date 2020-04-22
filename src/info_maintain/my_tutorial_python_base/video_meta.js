@@ -3,8 +3,8 @@ export const video_meta = {
     name: "Python视频教程-基础阶段",
     create_time: "2019-07",
     author: "杨铮",
-    cdn_base_url: "http://tutorial.cdn.1owo.com", //cdn基础路径
-    cos_base_url: "https://tutorial-1252072307.cos.ap-shanghai.myqcloud.com", //存储桶基础路径
+    cdn_base_url: require('../works.js').cdn_base_url,  //cdn基础路径 http://tutorial.cdn.1owo.com
+    cos_base_url: require('../works.js').cos_base_url,  //存储桶基础路径 https://tutorial-1252072307.cos.ap-shanghai.myqcloud.com
     episodes: [
         { key: 1, name: "L01语言介绍", size: 692/* Mb*/, duration: '01:30:50' /* H:M:S */, src: "/python_basic/L01语言介绍_v2.mp4"},
         { key: 2, name: "L02解释器安装", size: 292, duration: '00:54:22', src: "/python_basic/L02解释器安装_v2.mp4"},
@@ -25,7 +25,7 @@ export const video_meta = {
     ],
     // 简介内容有点多，想要一点格式。markdown依赖插件，渲染成组件也不能放到这个配置文件中。所以维护成html，前端v-html渲染。
     brief: `
-        <p>2019年应前公司要求，录制⏺️用做大学宣传体验和学生复习的基础课程。<b>完全从零基础开始的教程。</b></p>
+        <p>2019年应公司要求，录制⏺️用做大学宣传体验和学生复习的基础课程。<b>完全从零基础开始的教程。</b></p>
         <p><b>优点: </b></p>
         <ul style="list-style: disc">
             <li>零基础入门视频。特意开了干净的虚拟机来展现每一步过程。</li>
@@ -57,7 +57,7 @@ export const video_meta = {
             出于个人宣传利益和公司宣传利益，本人在这里也进行无盈利分发。
             </p>
             <p><b>本人已从智游公司离职。</b>本视频是我个人总结和前公司推广资料。除了维持前公司宣传方面的利益，不再对前公司业务进行任何评价。
-            不要问我'自学好还是培训好'、'培训机构哪家好'、'智游怎么样'等问题。
+            我不会直接回答'自学好还是培训好'、'培训机构哪家好'、'智游怎么样'等问题。
             技术问题可以跟我交流，对公司业务有兴趣请直接联系公司。
             </p>
             `

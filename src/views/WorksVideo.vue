@@ -53,14 +53,20 @@
                      v-if="video_meta.related_links && video_meta.related_links.length"
                 >
                     <h2 class="is-size-5">🔗相关链接</h2>
-                    <a v-for="(item, index) in video_meta.related_links"
-                       :key="index"
-                       :href="item.link"
-                       target="_blank"
-                       v-once
-                    >
-                        {{ item.name }}
-                    </a>
+                    <ul>
+                        <li
+                            v-for="(item, index) in video_meta.related_links"
+                            :key="index"
+                        >
+                            <a target="_blank"
+                               :href="item.link"
+                               v-once
+                            >
+                                {{ item.name }}
+                            </a>
+                        </li>
+                    </ul>
+
                 </div>
                 <div name="license">
                     <h2 class="is-size-5">©️版权</h2>

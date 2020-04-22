@@ -168,9 +168,8 @@ export const works =
                 {key: '关键字', content: 'blog, 静态博客'},
                 {key: '场景', content: '程序员自建博客'},
             ],
-            brief: `最近几年流行静态博客，比起csdn、博客园、简书这些平台更具自定义、更有B格。
-                    比起wordpress、自己开发的动态博客更易部署。静态博客代表项目有hexo、hugo、jekyll等️，无数据库依赖，让人们更专注写作✏️。
-                    此博客记录📝了我在2018年写的近百篇原创文章。(但静态博客也并非没有缺点，基于一些原因目前已停更。)
+            brief: `
+                    此博客记录了我在2018年用心书写✍️的近百篇原创文章。因为一些技术和想法原因，目前已停更。
                      `,
             links: [
                 {key: '访问', link: 'https://hexo.1owo.com/'},
@@ -245,7 +244,7 @@ export const works =
             ownCatalog: ['Backend'],
             priority: 20,
             cover: require('./my_tutorial_python_base/cover.png'),
-            title: 'Python基础教程',
+            title: 'Python视频教程-基础',
             attributes: [
                 {key: '时间', content: '2019-07'},
                 {key: '语言', content: 'Python'},
@@ -253,10 +252,29 @@ export const works =
                 {key: '场景', content: 'Python零基础视频教程'},
                 {key: '作者', content: '本人'},
             ],
-            brief: `前公司用做推广宣传布置的视频录制任务，覆盖python基础大纲三分之二内容，视频清晰、讲解细致。
+            brief: `2019年前公司用做推广宣传布置的视频录制任务，覆盖python基础，大纲进行了三分之二，视频清晰、讲解细致。
                      `,
             links: [
                 {key: '在线视频', link: '/works_video/my_tutorial_python_base'}
+            ]
+        },
+        {
+            // my_tutorial_python_flask
+            ownCatalog: ['Backend'],
+            priority: 30,
+            cover: require('./my_tutorial_python_flask/cover.png'),
+            title: 'Python视频教程-Flask框架 (半成品)',
+            attributes: [
+                {key: '时间', content: '2018-06'},
+                {key: '语言', content: 'Python'},
+                {key: '关键字', content: 'flask框架, 视频教程, Web开发'},
+                {key: '场景', content: 'Python Web开发视频教程'},
+                {key: '作者', content: '本人'},
+            ],
+            brief: `2018年与本地一家公司合作录制，是我初次录制视频教程。因种种原因合作终止。图文教程详细，视频教程半成品，大纲进度一半。
+                     `,
+            links: [
+                {key: '在线视频', link: '/works_video/my_tutorial_python_flask'}
             ]
         },
         {
@@ -317,3 +335,8 @@ export const works =
             ]
         }
     ]
+
+
+// 3.视频类cos和cdn基础地址
+export const cdn_base_url= "http://tutorial.cdn.1owo.com"
+export const cos_base_url= "https://tutorial-1252072307.cos.ap-shanghai.myqcloud.com"

@@ -278,6 +278,26 @@ export const works =
             ]
         },
         {
+            // my_tutorial_python_zhiyou14
+            ownCatalog: ['Backend'],
+            priority: 25,
+            cover: require('./my_tutorial_python_zhiyou14/cover.png'),
+            title: '完整带完一期线下python班的教案和视频',
+            attributes: [
+                {key: '时间', content: '2018-08 2019-03'},
+                {key: '语言', content: 'Python'},
+                {key: '关键字', content: 'flask框架, 视频教程, Web开发'},
+                {key: '场景', content: 'Python Web开发视频教程'},
+                {key: '作者', content: '本人'},
+            ],
+            brief: `五个月完整带完一期线下python班的教案和视频，全面的知识和学生工作。对个人各方面都是个锻炼，我对经手的第一期学生也很有感情。
+                     `,
+            links: [
+                {key: '教案git仓库', link: ''},
+                {key: '说明', link: '/works_detail/my_tutorial_python_zhiyou14'},
+            ]
+        },
+        {
             // my_srs
             ownCatalog: ['Server'],
             priority: 65,

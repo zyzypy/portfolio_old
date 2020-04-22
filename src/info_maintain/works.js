@@ -241,6 +241,25 @@ export const works =
             ]
         },
         {
+            // my_tutorial_python_base
+            ownCatalog: ['Backend'],
+            priority: 20,
+            cover: require('./my_tutorial_python_base/cover.png'),
+            title: 'Python基础教程',
+            attributes: [
+                {key: '时间', content: '2019-07'},
+                {key: '语言', content: 'Python'},
+                {key: '关键字', content: '零基础, 视频教程'},
+                {key: '场景', content: 'Python零基础视频教程'},
+                {key: '作者', content: '本人'},
+            ],
+            brief: `前公司用做推广宣传布置的视频录制任务，覆盖python基础大纲三分之二内容，视频清晰、讲解细致。
+                     `,
+            links: [
+                {key: '在线视频', link: '/works_video/my_tutorial_python_base'}
+            ]
+        },
+        {
             // my_srs
             ownCatalog: ['Server'],
             priority: 65,

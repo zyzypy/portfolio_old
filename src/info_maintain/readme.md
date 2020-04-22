@@ -1,7 +1,10 @@
 作品列表信息 works.js中维护
 说明信息维护 src/info_maintain/my_xxx/
 静态文件在/public目录下维护。vue-cli3 static files   https://cli.vuejs.org/guide/html-and-static-assets.html#html
-对应组件为 src/views/WorkDetail.vue和WorkVideo.vue
+
+示例：
+markdown型 src/views/WorkDetail.vue  src/info_maintain/my_access
+video型 src/views/WorkVideo.vue  src/info_maintain/my_tutorial_python_base
 
 可能的报错:
 - 每一个作品详情说明页面信息 my_app.md 中维护。图片中文名会导致webpack报错。

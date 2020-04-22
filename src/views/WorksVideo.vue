@@ -31,7 +31,7 @@
                                 type="is-primary"
                                 :class="{'is-outlined': item.key!==current_episode.key}"
                         >
-                            {{ item.button }} {{ item.name }}
+                            {{ item.key }}P {{ item.name }}
                         </b-button>
                     </div>
                 </div>
@@ -48,6 +48,19 @@
                 <div name="breif">
                     <h2 class="is-size-5">介绍</h2>
                     <div v-html="video_meta.brief"></div>
+                </div>
+                <div name="related-links"
+                     v-if="video_meta.related_links && video_meta.related_links.length"
+                >
+                    <h2 class="is-size-5">🔗相关链接</h2>
+                    <a v-for="(item, index) in video_meta.related_links"
+                       :key="index"
+                       :href="item.link"
+                       target="_blank"
+                       v-once
+                    >
+                        {{ item.name }}
+                    </a>
                 </div>
                 <div name="license">
                     <h2 class="is-size-5">©️版权</h2>
@@ -108,14 +121,14 @@
         computed: {
             traffic_fee() {
                 let price = 0.4  // 对象存储 0.45和cdn 0.31的大约平均费用 元/GB
-                return this.current_episode.size /1000 * price
-            },
-
+                return (this.current_episode.size /1000 * price).toFixed(1)
+            }
         },
         watch: {
             // 播放器地址跟随当前集。 可以使beforeMount()和switch_episode(key)减少一句赋值代码，增加逻辑独立性。
             current_episode() {
-                this.playerOptions.sources[0].src = this.current_episode.src
+                // 当前视频源走腾讯云CDN
+                this.playerOptions.sources[0].src = this.video_meta.cdn_base_url + this.current_episode.src
             }
         },
         methods: {
@@ -139,7 +152,8 @@ section[name="main"] div[name="video-player-wrap"] {
     margin: 3rem auto;
     padding: 4px; /* .box自带的阴影自然但padding太大，为0时video播放器又会超出边界 */
 }
-div[name="detail"], div[name="breif"], div[name="license"] {
+div[name="detail"], div[name="breif"], div[name="license"],
+div[name="related-links"] {
     margin-top: 2rem;
 }
 

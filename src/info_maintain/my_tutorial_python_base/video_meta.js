@@ -3,13 +3,27 @@ export const video_meta = {
     name: "Python视频教程-基础阶段",
     create_time: "2019-07",
     author: "杨铮",
-    src_base_url: "http://tutorial.1owo.com", //cdn或存储桶基础路径
+    cdn_base_url: "http://tutorial.cdn.1owo.com", //cdn基础路径
+    cos_base_url: "https://tutorial-1252072307.cos.ap-shanghai.myqcloud.com", //存储桶基础路径
     episodes: [
-        // size Mb  duration H:M:S
-        { key: 1, button: "1P", name: "安装解释器", size: 300/* Mb*/, duration: '01:30:50' /* H:M:S */, src: "https://tutorial-1252072307.cos.ap-shanghai.myqcloud.com/python_basic/L02%E8%A7%A3%E9%87%8A%E5%99%A8%E5%AE%89%E8%A3%85_v2.mp4"},
-        { key: 2, button: "2P", name: "变量", size: 300, src: "https://tutorial-1252072307.cos.ap-shanghai.myqcloud.com/python_basic/L03pycharm%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8_v2.mp4"}
+        { key: 1, name: "L01语言介绍", size: 692/* Mb*/, duration: '01:30:50' /* H:M:S */, src: "/python_basic/L01语言介绍_v2.mp4"},
+        { key: 2, name: "L02解释器安装", size: 292, duration: '00:54:22', src: "/python_basic/L02解释器安装_v2.mp4"},
+        { key: 3, name: "L03pycharm安装使用", size: 425, duration: '01:20:30', src: "/python_basic/L03pycharm安装使用_v2.mp4"},
+        { key: 4, name: "L04基础", size: 1420, duration: '01:25:21', src: "/python_basic/L04基础.mp4"},
+        { key: 5, name: "L05控制语句", size: 1040, duration: '01:18:25', src: "/python_basic/L05控制语句.mp4"},
+        { key: 6, name: "L06函数1p", size: 1080, duration: '01:14:00', src: "/python_basic/L06函数1p.mp4"},
+        { key: 7, name: "L06函数2p", size: 1200, duration: '01:26:28', src: "/python_basic/L06函数2p.mp4"},
+        { key: 8, name: "L07数据结构容器1p", size: 1150, duration: '00:58:44', src: "/python_basic/L07数据结构容器1p.mp4"},
+        { key: 9, name: "L07数据结构容器2p", size: 1290, duration: '01:05:40', src: "/python_basic/L07数据结构容器2p.mp4"},
+        { key: 10, name: "L08综合项目-学生管理系统", size: 1440, duration: '01:08:46', src: "/python_basic/L08综合项目-学生管理系统.mp4"},
+        { key: 11, name: "L09类和实例1p", size: 762, duration: '00:43:46', src: "/python_basic/L09类和实例1p.mp4"},
+        { key: 12, name: "L09类和实例2p", size: 731, duration: '00:43:55', src: "/python_basic/L09类和实例2p.mp4"},
+        { key: 13, name: "L09类和实例3p", size: 1050, duration: '01:05:21', src: "/python_basic/L09类和实例3p.mp4"},
+        { key: 14, name: "L09类和实例4p", size: 413, duration: '00:22:04', src: "/python_basic/L09类和实例4p.mp4"},
+        { key: 15, name: "L10包和引用1p", size: 892, duration: '00:54:06', src: "/python_basic/L10包和引用1p.mp4"},
+        { key: 16, name: "L10包和引用2p", size: 699, duration: '00:36:23', src: "/python_basic/L10包和引用2p.mp4"},
     ],
-    // 简介内容有点多，又不想渲染成一段一团。markdown依赖插件，直接维护成html，前端v-html渲染。
+    // 简介内容有点多，想要一点格式。markdown依赖插件，渲染成组件也不能放到这个配置文件中。所以维护成html，前端v-html渲染。
     brief: `
         <p>2019年应前公司要求，录制⏺️用做大学宣传体验和学生复习的基础课程。<b>完全从零基础开始的教程。</b></p>
         <p><b>优点: </b></p>
@@ -35,7 +49,16 @@ export const video_meta = {
         目前进度不会继续往后录了。未来可能重新录制。</p>
         `,
     related_links: [
-        { key: "教案", link:"/#" }
+        // 可以为空数组
+        { name: "（todo待更新）教案git仓库", link:"/#" }
     ],
-    license: "属于本人和前公司所有。本视频未在其它任何视频平台发布。"
+    license: `<p>
+            <b>版权属于本人和智游公司所有。</b>本视频未在其它任何视频平台发布，禁止第三方商用。此视频是前公司宣传推广资料，免费分发至院校学生和咨询者。
+            出于个人宣传利益和公司宣传利益，本人在这里也进行无盈利分发。
+            </p>
+            <p><b>本人已从智游公司离职。</b>本视频是我个人总结和前公司推广资料。除了维持前公司宣传方面的利益，不再对前公司业务进行任何评价。
+            不要问我'自学好还是培训好'、'培训机构哪家好'、'智游怎么样'等问题。
+            技术问题可以跟我交流，对公司业务有兴趣请直接联系公司。
+            </p>
+            `
 }

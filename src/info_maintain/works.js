@@ -281,10 +281,10 @@ export const works =
             // my_tutorial_python_zhiyou14
             ownCatalog: ['Backend'],
             priority: 25,
-            cover: require('./my_tutorial_python_zhiyou14/cover.png'),
+            cover: require('./my_tutorial_python_zhiyou/cover.png'),
             title: '完整带完一期线下python班的教案和视频',
             attributes: [
-                {key: '时间', content: '2018-08 2019-03'},
+                {key: '时间', content: '2018-08～2019-03'},
                 {key: '语言', content: 'Python'},
                 {key: '关键字', content: 'flask框架, 视频教程, Web开发'},
                 {key: '场景', content: 'Python Web开发视频教程'},
@@ -293,8 +293,8 @@ export const works =
             brief: `五个月完整带完一期线下python班的教案和视频，全面的知识和学生工作。对个人各方面都是个锻炼，我对经手的第一期学生也很有感情。
                      `,
             links: [
-                {key: '教案git仓库', link: ''},
-                {key: '说明', link: '/works_detail/my_tutorial_python_zhiyou14'},
+                {key: '⇱教案git仓库(gitee)', link: 'https://gitee.com/canaan_ge/my_tutorial_python_zhiyou'},
+                {key: '说明', link: '/works_detail/my_tutorial_python_zhiyou'},
             ]
         },
         {
@@ -358,5 +358,7 @@ export const works =
 
 
 // 3.视频类cos和cdn基础地址
+// https网站内的http请求会自动升级，此处不管配置http还是https都会自动升级为https，应在cdn控制台配置cdn域名的https证书
 export const cdn_base_url= "http://tutorial.cdn.1owo.com"
-export const cos_base_url= "https://tutorial-1252072307.cos.ap-shanghai.myqcloud.com"
+// 回源地址在cdn控制台配置
+// export const cos_base_url= "https://tutorial-1252072307.cos.ap-shanghai.myqcloud.com"

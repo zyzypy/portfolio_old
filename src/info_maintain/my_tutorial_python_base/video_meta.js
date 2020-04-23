@@ -50,7 +50,7 @@ export const video_meta = {
         `,
     related_links: [
         // 可以为空数组
-        { name: "（todo待更新）教案git仓库", link:"/#" }
+        { name: "⇱教案git仓库(gitee)", link:"https://gitee.com/canaan_ge/my_tutorial_python_zhiyou" }
     ],
     license: `<p>
             <b>版权属于本人和智游公司所有。</b>本视频未在其它任何视频平台发布，禁止第三方商用。此视频是前公司宣传推广资料，免费分发至院校学生和咨询者。

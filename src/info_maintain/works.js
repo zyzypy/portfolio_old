@@ -319,11 +319,12 @@ export const works =
         {
             // my_ui_house_selling
             ownCatalog: ['UI&UX'],
-            priority: 30,
+            priority: 31,
             cover: require('./my_ui_house_selling/cover.jpg'),
-            title: '基于xbox体感操作的售楼界面软件',
+            title: '基于xbox体感操作的售楼软件界面',
             attributes: [
                 {key: '时间', content: '2015-03'},
+                {key: '硬件', content: 'xbox主机🎮、xbox摄像头、电视📺'},
                 {key: '工具', content: 'PhotoShop'},
                 {key: '关键字', content: 'xbox, 售楼平面'},
             ],
@@ -354,7 +355,7 @@ export const works =
         {
             // my_ui_novice
             ownCatalog: ['UI&UX'],
-            priority: 30,
+            priority: 32,
             cover: require('./my_ui_novice/cover.jpg'),
             title: '一个UI教材上的所有练习',
             attributes: [

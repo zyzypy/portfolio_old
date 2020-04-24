@@ -317,6 +317,77 @@ export const works =
             ]
         },
         {
+            // my_ui_house_selling
+            ownCatalog: ['UI&UX'],
+            priority: 30,
+            cover: require('./my_ui_house_selling/cover.jpg'),
+            title: '基于xbox体感操作的售楼界面软件',
+            attributes: [
+                {key: '时间', content: '2015-03'},
+                {key: '工具', content: 'PhotoShop'},
+                {key: '关键字', content: 'xbox, 售楼平面'},
+            ],
+            brief: `甲方很有创意，时至今日用xbox游戏机体感做软件也是很特别的。
+                     `,
+            links: [
+                {key: '效果图', link: '/works_detail/my_ui_house_selling'},
+            ]
+        },
+        {
+            // my_ui_jiuyunda
+            ownCatalog: ['UI&UX'],
+            priority: 30,
+            cover: require('./my_ui_jiuyunda/cover.png'),
+            title: '酒运达app界面',
+            attributes: [
+                {key: '时间', content: '2015-05～2015-11'},
+                {key: '工具', content: 'PhotoShop'},
+                {key: '关键字', content: '垂直电商, app, 多端适配'},
+            ],
+            brief: `2015年在一家公司里负责app界面版本迭代。时值UI行业初兴，教程短缺，行业不规范，努力做好自己的事和思考应该做的事。
+                    完成设计稿的同时配合安卓/IOS端适配。
+                     `,
+            links: [
+                {key: '效果图', link: '/works_detail/my_ui_jiuyunda'},
+            ]
+        },
+        {
+            // my_ui_novice
+            ownCatalog: ['UI&UX'],
+            priority: 30,
+            cover: require('./my_ui_novice/cover.jpg'),
+            title: '一个UI教材上的所有练习',
+            attributes: [
+                {key: '时间', content: '2014-10'},
+                {key: '工具', content: 'PhotoShop'},
+                {key: '关键字', content: '教程, UI, 扁平化'},
+            ],
+            brief: `2014年初开始关注UI，网上竟然找不到本教程，全是名字UI实则教平面的。年中的时候终于发现本新书
+                《APP手机界面创意设计新手通》作者: 王巧伶 。跟着自学、练习了书中所有例子，培养了基本技能和审美。
+                     `,
+            links: [
+                {key: '效果图', link: '/works_detail/my_ui_novice'},
+            ]
+        },
+        {
+            // my_ui_others
+            ownCatalog: ['UI&UX'],
+            priority: 40,
+            cover: require('./my_ui_others/cover.jpg'),
+            title: '其它零碎的UI作品',
+            attributes: [
+                {key: '时间', content: '2015'},
+                {key: '工具', content: 'PhotoShop'},
+                {key: '关键字', content: '私活,'},
+            ],
+            brief: `其它零碎的UI作品。
+                     `,
+            links: [
+                {key: '效果图', link: '/works_detail/my_ui_others'},
+                {key: '⇱UI中国/canaan_ui', link: 'https://i.ui.cn/ucenter/145848'},
+            ]
+        },
+        {
             //test2
             ownCatalog: ['Frontend'],
             priority: 90,

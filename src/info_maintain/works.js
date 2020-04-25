@@ -197,6 +197,28 @@ export const works =
             ]
         },
         {
+            // my_niaowoyun
+            ownCatalog: ['Server', 'UI&UX'],
+            priority: 45,
+            cover: require('./my_niaowoyun/cover.jpg'),
+            title: '鸟窝云在线云虚拟化',
+            attributes: [
+                {key: '时间', content: '2015-10'},
+                {key: '框架', content: 'OpenStack, kvm'},
+                {key: '硬件', content: '高配刀片服务器*3'},
+                {key: '关键字', content: '虚拟化, 云主机'},
+            ],
+            brief: `2015年初加入的一家创业公司，我在团队中任职产品兼UI。产品类似阿里云，在当时还是挺先进的，
+                    浏览器打开就是一个windows或linux虚拟机，提供图形界面和多种linux发行版，用户有一点，
+                    但最终由于老板资金不多又没拿到融资，短短不足两个月就失败了。
+                    设计稿在卖电脑时漏转至移动硬盘，很可惜已丢失，只在百度中找到了封面这张模糊的图。
+                    老板刘金金在河南本地idc景安工作多年后创业，后来才知道他每次都搞这个每次都失败，故意欺骗员工拖欠工资，
+                    我知道的已有三波，唯一一次曝光人名，郑州从业者请避雷。
+                     `,
+            links: [
+            ]
+        },
+        {
             // my_odoo
             ownCatalog: ['Backend'],
             priority: 80,
@@ -278,23 +300,47 @@ export const works =
             ]
         },
         {
-            // my_tutorial_python_zhiyou14
-            ownCatalog: ['Backend'],
-            priority: 25,
-            cover: require('./my_tutorial_python_zhiyou/cover.png'),
-            title: '完整带完一期线下python班的教案和视频',
+            // my_raspberry_pie_bullettime
+            ownCatalog: ['Backend', 'Server'],
+            priority: 32,
+            cover: require('./my_raspberry_pie_bullettime/cover.gif'),
+            title: '基于树莓派的子弹时间拍摄🎬阵列',
             attributes: [
-                {key: '时间', content: '2018-08～2019-03'},
-                {key: '语言', content: 'Python'},
-                {key: '关键字', content: 'flask框架, 视频教程, Web开发'},
-                {key: '场景', content: 'Python Web开发视频教程'},
-                {key: '作者', content: '本人'},
+                {key: '时间', content: '2016-12'},
+                {key: '语言&框架', content: 'Python, flask, bootstrap, linux'},
+                {key: '硬件', content: '测试环境（树莓派3b+官方v2摄像头）*7, 正式环境更多套'},
+                {key: '场景', content: '影视行业，商场活动'},
+                {key: '难点', content: '并行(不是并发)无延迟请求, 多主机批量管理'},
             ],
-            brief: `五个月完整带完一期线下python班的教案和视频，全面的知识和学生工作。对个人各方面都是个锻炼，我对经手的第一期学生也很有感情。
+            brief: `2016年初玩树莓配不久，刚尝试完上面的PM2.5项目，就恰巧接到这个有趣的商业需求。子弹时间是个非常垂直小众的需求，
+                    探索未知领域和技术非常有趣。最终完成了主要需求，但也随着进行出现了一些困难，感觉没做到完善有些可惜。
+                    甲方已申请专利，我很高兴。
                      `,
             links: [
-                {key: '⇱教案git仓库(gitee)', link: 'https://gitee.com/canaan_ge/my_tutorial_python_zhiyou'},
-                {key: '说明', link: '/works_detail/my_tutorial_python_zhiyou'},
+                {key: '说明', link: '/works_detail/my_raspberry_pie_bullettime'},
+            ]
+        },
+        {
+            // my_raspberry_pie_weather
+            ownCatalog: ['Backend', 'Server', 'Frontend'],
+            priority: 30,
+            cover: require('./my_raspberry_pie_weather/cover.jpg'),
+            title: '树莓派粉尘传感器',
+            attributes: [
+                {key: '时间', content: '2016-10'},
+                {key: '语言', content: 'Python, html/css/js'},
+                {key: '框架', content: 'Flask, Material-Design-lite, HighCharts'},
+                {key: '硬件', content: '树莓派3b, 微雪7寸lcd电容屏'},
+                {key: '关键字', content: '树莓派, 传感器, linux, 图表, 智能硬件'},
+            ],
+            brief: `2016年学过python基础后了解到树莓派。玩硬件很有趣就像玩玩具一样，从简单led灯泡和各种系统玩起。
+                    由于当时雾霾🌫️严重就购买了攀藤传感器。折腾过程中熟练了linux，硬件知识。
+                    温湿度传感器返回的高低电平需要转换为➡️二进制➡️字节➡️数值，让我明白计算机二进制01到底代表什么。
+                     `,
+            links: [
+                {key: '⇱v1版 git仓库', link: 'https://github.com/canaan-yz/weather'},
+                {key: '⇱v2版 git仓库', link: 'https://code.aliyun.com/zzdxyz/weather/tree/master'},
+                {key: '⇱说明&大概教程', link: 'https://hexo.1owo.com/硬件/硬件/硬件-树莓派weather项目说明/'},
             ]
         },
         {
@@ -314,6 +360,26 @@ export const works =
             links: [
                 {key: 'Demo测试说明', link: '/works_detail/my_srs'},
                 {key: '客户端', link: 'https://srs.1owo.com/'},
+            ]
+        },
+        {
+            // my_tutorial_python_zhiyou14
+            ownCatalog: ['Backend'],
+            priority: 25,
+            cover: require('./my_tutorial_python_zhiyou/cover.png'),
+            title: '完整带完一期线下python班的教案和视频',
+            attributes: [
+                {key: '时间', content: '2018-08～2019-03'},
+                {key: '语言', content: 'Python'},
+                {key: '关键字', content: 'flask框架, 视频教程, Web开发'},
+                {key: '场景', content: 'Python Web开发视频教程'},
+                {key: '作者', content: '本人'},
+            ],
+            brief: `五个月完整带完一期线下python班的教案和视频，全面的知识和学生工作。对个人各方面都是个锻炼，我对经手的第一期学生也很有感情。
+                     `,
+            links: [
+                {key: '⇱教案git仓库(gitee)', link: 'https://gitee.com/canaan_ge/my_tutorial_python_zhiyou'},
+                {key: '说明', link: '/works_detail/my_tutorial_python_zhiyou'},
             ]
         },
         {

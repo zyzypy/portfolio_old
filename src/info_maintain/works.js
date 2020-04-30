@@ -582,13 +582,22 @@ export const socials = [
         content: '邮箱-1owo',
         href: 'mailto:yz@1owo.com',
         remark: `我的域名邮箱: yz@1owo.com <br>点击按钮会调用默认邮件客户端`,
-    },{
+    },
+    {
         id: 8,
+        name: 'git',
+        icon: 'git',
+        content: 'Git',
+        remark: `gitee:canaan_ge; github:canaan-yz 
+                `,
+    },
+    {
+        id: 9,
         name: 'others',
         icon: 'web',
         content: '其它',
-        remark: `gitee:canaan_ge; github:canaan-yz; 贴吧:注冊什么ID好呢; 网易新闻:闷声细软跑; B站:canaanbili; 
-                <br>微博、QQ空间、UI中国、csdn、twitter、telegram等停止更新或几乎不玩，不再赘述。
+        remark: `贴吧:注冊什么ID好呢; 网易新闻:闷声细软跑; B站:canaanbili; 
+                微博、QQ空间、UI中国、csdn、twitter、telegram等停止更新或几乎不玩，不再赘述。
                 `,
     },
 ]

@@ -8,15 +8,16 @@ const routes = [
   {
     path: '/',
     name: 'Home',
-    component: Home
+    component: Home,
+    redirect: '/works'   // 首页暂时重定向到作品页
   },
   {
-    path: '/about',
-    name: 'About',
+    path: '/contact',
+    name: 'Contact',
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
+    component: () => import(/* webpackChunkName: "about" */ '../views/Contact.vue')
   },
   {
     path: '/works',

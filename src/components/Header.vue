@@ -6,7 +6,7 @@
             <!-- Hero head: will stick at the top -->
             <div class="hero-head">
                 <!-- (新版本已修复)buefy v0.8.10 navbar组件存在没有fixed-top属性切换路由报vue warn remove的一个错误，加上后首次进入首页无背景色 -->
-                <b-navbar type="is-primary" class="is-primary -nav-gradient-bg" fixed-top>
+                <b-navbar type="is-primary" class="-nav-gradient-bg is-primary" fixed-top>
                     <template slot="brand">
                         <b-navbar-item tag="router-link" :to="{ path: '/' }">
                             <h2 class="is-size-4">PORTFOLIO</h2>
@@ -17,33 +17,23 @@
                         </b-navbar-item>
                     </template>
                     <template slot="end">
-                        <b-navbar-item href="#/about">
+                        <b-navbar-item tag="router-link" :to="{path: '/works'}">
+                            <b-icon
+                                    icon="apps"
+                                    size="is-medium"
+                            >
+                            </b-icon>
+                            <span class="is-size-5">作品&demo</span>
+                        </b-navbar-item>
+                        <b-navbar-item tag="router-link" :to="{path: '/contact'}">
                             <!-- https://buefy.org/documentation/icon -->
                             <b-icon
                                     pack="mdi"
-                                    icon="account"
-                                    size="is-small"
+                                    icon="account-box"
+                                    size="is-medium"
                             >
                             </b-icon>
-                            <span>关于我</span>
-                        </b-navbar-item>
-                        <b-navbar-item tag="router-link" :to="{ path: '/works' }">
-                            <b-icon
-                                    icon="apps"
-                                    size="is-small"
-                            >
-                            </b-icon>
-                            <span>作品&demo</span>
-                        </b-navbar-item>
-                    </template>
-
-                    <template slot="end">
-                        <b-navbar-item tag="div">
-                            <div class="buttons">
-                                <a class="button is-light is-disabled" href="#">
-                                    <span>开发中...</span>
-                                </a>
-                            </div>
+                            <span class="is-size-5">联系我</span>
                         </b-navbar-item>
                     </template>
 

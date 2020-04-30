@@ -23,6 +23,11 @@ const routes = [
     name: 'Works',
     component: () => import('../views/Works.vue')
   },
+  {
+    path: '/contact',
+    name: 'Contact',
+    component: () => import('../views/Contact.vue')
+  },
   // ======== works_detail ==========
   // 动态路由 https://router.vuejs.org/zh/guide/essentials/dynamic-matching.html   嵌套路由适用组件嵌套情况
   {

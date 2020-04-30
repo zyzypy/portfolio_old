@@ -363,6 +363,26 @@ export const works =
             ]
         },
         {
+            // my_spider
+            ownCatalog: ['Backend'],
+            priority: 70,
+            cover: require('./my_spider/cover.jpg'),
+            title: '爬虫基础',
+            attributes: [
+                {key: '时间', content: '2019-10'},
+                {key: '语言', content: 'Python'},
+                {key: '框架', content: 'Scrapy'},
+            ],
+            brief: `几个基础例子，来源网络教程。电影网站排名爬虫纯脚本最简单，校花网爬虫使用scrapy，
+                    百度百科爬虫自己实现了类似scrapy的结构有利于理解爬虫架构。
+                     `,
+            links: [
+                {key: '⇱脚本爬取电影排行 git仓库', link: 'https://gitee.com/canaan_ge/movie'},
+                {key: '⇱scrapy校花网图片下载 git仓库', link: 'https://gitee.com/canaan_ge/xiaohua_spider'},
+                {key: '⇱类scrapy架构百科爬虫 git仓库', link: 'https://gitee.com/canaan_ge/baike_spider'}
+            ]
+        },
+        {
             // my_tutorial_python_zhiyou14
             ownCatalog: ['Backend'],
             priority: 25,
@@ -380,6 +400,28 @@ export const works =
             links: [
                 {key: '⇱教案git仓库(gitee)', link: 'https://gitee.com/canaan_ge/my_tutorial_python_zhiyou'},
                 {key: '说明', link: '/works_detail/my_tutorial_python_zhiyou'},
+            ]
+        },
+        {
+            // my_ui
+            ownCatalog: ['UI&UX', 'Backend', 'Frontend'],
+            priority: 30,
+            cover: require('./my_ui/cover.png'),
+            title: 'UI素材下载站',
+            attributes: [
+                {key: '时间', content: '2016-08'},
+                {key: '语言', content: 'Python, HTML/CSS'},
+                {key: '框架', content: 'Flask, Bootstrap'},
+                {key: '软件', content: 'Pycharm, PhotoShop, Illustrator'},
+                {key: '部署', content: 'Ubuntu, Nginx, gunicorn, gevent, 对象存储, CDN'},
+            ],
+            brief: `2016年从UI领域回到编程领域，自学完python和flask基础后，想做一个跟两个领域都有关的东西作为实战练习。
+                    想法就是"素材网站"。从网盘、淘宝、国外网站搜集了一些素材，经过挑选，PS手工花了几天整理出一百二十套素材
+                    （当时实在找不到处理psd的包)，以psd文件为主、少量ai和sketch文件。是我第一个较为完整的网站。
+                     `,
+            links: [
+                {key: '⇱git仓库', link: 'https://gitee.com/canaan_ge/my_ui'},
+                {key: '⇱访问哇哦素材', link: 'https://ui.1owo.com'},
             ]
         },
         {
@@ -423,7 +465,7 @@ export const works =
             ownCatalog: ['UI&UX'],
             priority: 32,
             cover: require('./my_ui_novice/cover.jpg'),
-            title: '一个UI教材上的所有练习',
+            title: '一本UI教材上的所有练习',
             attributes: [
                 {key: '时间', content: '2014-10'},
                 {key: '工具', content: 'PhotoShop'},
@@ -459,26 +501,7 @@ export const works =
             ownCatalog: ['Frontend'],
             priority: 90,
             cover: require('../assets/images/cubes.gif'),
-            title: 'xxx项目-2',
-            attributes: [
-                {key: '语言', content: 'html/css/js, nodejs'},
-                {key: '框架', content: 'Vue全家桶(不含vuex), Buefy, Bulma'},
-                {key: '分类', content: '前端, UI, 部署'},
-                {key: '场景', content: 'H5单页,一般性网站、个人网站、企业官网'},
-            ],
-            brief: `基于Vue、尝鲜Buefy开发的静态页面网站，追求美观。得益于vue，更易于扩展开发和维护，并具备交互能力。仿照自工程师yandev的网站设计图制作。
-                                         `,
-            links: [
-                {key: '在线Demo', link: 'http://'},
-                {key: '详细说明', link: 'http://'}
-            ]
-        },
-        {
-            // test
-            ownCatalog: ['Frontend'],
-            priority: 90,
-            cover: require('../assets/images/cubes.gif'),
-            title: 'xxx项目-2',
+            title: '测试测试2',
             attributes: [
                 {key: '语言', content: 'html/css/js, nodejs'},
                 {key: '框架', content: 'Vue全家桶(不含vuex), Buefy, Bulma'},
@@ -495,8 +518,88 @@ export const works =
     ]
 
 
-// 3.视频类cos和cdn基础地址
-// https网站内的http请求会自动升级，此处不管配置http还是https都会自动升级为https，应在cdn控制台配置cdn域名的https证书
-export const cdn_base_url= "http://tutorial.cdn.1owo.com"
+
+
+// 3. 联系方式
+export const socials = [
+    {
+        // qq推广 https://shang.qq.com/v3/index.html
+        id: 1,
+        name: 'qq_group',
+        icon: 'account-group',
+        recommend: true,
+        content: 'QQ群',
+        href: 'http://shang.qq.com/wpa/qunwpa?idkey=bb06d2574a9ba69fee5b6df2c48070908b1d51ccc4ca9b9105a20002668262cb',
+        remark: `👏欢迎加入「Python新手交流QQ群 775648064」，有问题不用害羞直接问。我一直在线，不用@at，闲时解答。禁止广告、导流。
+                <br>点击按钮加入群聊。`,
+        remark_img: require('../info_maintain/contact/qq_group_qrcode.jpeg')
+    },
+    {
+        id: 2,
+        name: 'qq',
+        icon: 'qqchat',
+        content: 'QQ',
+        href: 'http://wpa.qq.com/msgrd?v=3&uin=969501808&site=qq&menu=yes',
+        remark: `QQ在办公方面依然好用，聊天、传文件。我一直在线，看到后会回复。主要接受商业咨询。免费交流优先QQ群，因为那样其它人也可以看到学习。
+                <br>点击按钮添加好友。`,
+        remark_img: require('../info_maintain/contact/qq_qrcode_1.jpeg')
+    },
+    {
+        id: 3,
+        name: 'wechat',
+        icon: 'wechat',
+        content: '微信',
+        remark: `诚然微信是最流行的聊天工具，但我平时工作需要保持专注和双手在键盘上。仅接受商业需求咨询或已合作对象添加，请见谅。`,
+        remark_img: require('../info_maintain/contact/wechat_qrcode_1.jpeg')
+    },
+    {
+        id: 4,
+        name: 'phone',
+        icon: 'phone',
+        content: '电话',
+        remark: `电话是除了面谈外最有效率的沟通方式，但我平时工作需要保持专注。仅接收商业需求咨询，请见谅。`,
+    },
+    {
+        id: 5,
+        name: 'email_qq',
+        icon: 'email',
+        content: '邮箱-QQ',
+        href: 'mailto:969501808@qq.com',
+        remark: `QQ邮箱: 969501808@qq.com <br>点击按钮会调用默认邮件客户端`,
+    },
+    {
+        id: 6,
+        name: 'email_gmail',
+        icon: 'gmail',
+        content: '邮箱-Gmail',
+        href: 'mailto:canaanyangzheng@gmail.com',
+        remark: `谷歌邮箱: canaanyangzheng@gmail.com <br>点击按钮会调用默认邮件客户端`,
+    },
+    {
+        id: 7,
+        name: 'email_domain',
+        icon: 'email',
+        content: '邮箱-1owo',
+        href: 'mailto:yz@1owo.com',
+        remark: `我的域名邮箱: yz@1owo.com <br>点击按钮会调用默认邮件客户端`,
+    },{
+        id: 8,
+        name: 'others',
+        icon: 'web',
+        content: '其它',
+        remark: `gitee:canaan_ge; github:canaan-yz; 贴吧:注冊什么ID好呢; 网易新闻:闷声细软跑; B站:canaanbili; 
+                <br>微博、QQ空间、UI中国、csdn、twitter、telegram等停止更新或几乎不玩，不再赘述。
+                `,
+    },
+]
+
+
+
+
+
+// 4.视频类cos和cdn基础地址
+// https网站内的http请求会自动升级，此处不管配置http还是https都会自动升级为https。配置为http会影响主网页的http安全🔐标识。
+// 应该配置为https，并在cdn控制台配置cdn域名的https证书。
+export const cdn_base_url= "https://tutorial.cdn.1owo.com"
 // 回源地址在cdn控制台配置
 // export const cos_base_url= "https://tutorial-1252072307.cos.ap-shanghai.myqcloud.com"

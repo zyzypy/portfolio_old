@@ -87,7 +87,7 @@ export const catalogs = [
 /* 维护
     所属目录    ['','']
     排序优先级  0-100  0最高
-    封面图     assets/images下或网址  30*20rem
+    封面图     assets/images下或网址  800*500 144dpi
     h2关键字   4组左右
     brief     50-200字
     links按钮组   1-4个   详细说明路由地址与src/info_maintain/my_xxx一致
@@ -238,6 +238,26 @@ export const works =
             links: [
                 {key: '在线Demo', link: 'https://odoo.1owo.com/'},
                 {key: '安利说明', link: '/works_detail/my_odoo'}
+            ]
+        },
+        {
+            // my_portfolio
+            ownCatalog: ['Frontend'],
+            priority: 29,
+            cover: require('./my_portfolio/cover.png'),
+            title: '作品集网页（你现在看到的这个页面）',
+            attributes: [
+                {key: '时间', content: '2020-04'},
+                {key: '语言', content: 'html/css'},
+                {key: '框架', content: 'Vue, vue-router, vue-cli3, webpack4, Buefy, Bulma'},
+            ],
+            brief: `2020年初，适逢疫情和换工作，想把这几年好好总结一下。想练习前端，选型美观的Buefy Vue UI组件库。
+                    发现了理想中的大神yandev.de，于是模仿他的设计稿编写代码，最终实现了大部分效果。对于一位程序员来说，
+                    公司的项目是带不出来的，能力和经验只能通过个人项目来体现，我很高兴这些年留下的一些个人项目，其中不少是商业项目。
+                     `,
+            links: [
+                {key: '说明', link: '/works_detail/my_portfolio'},
+                {key: '⇱git仓库', link: 'https://gitee.com/canaan_ge/my_portfolio'}
             ]
         },
         {

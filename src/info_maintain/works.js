@@ -131,7 +131,7 @@ export const works =
             brief: `gitlab知名度仅次于github, 是公司内部自建git服务的首选方案。功能成熟、UI美观。
                      `,
             links: [
-                {key: '在线Demo', link: 'http://gitlab.1owo.com'},
+                {key: '在线Demo(暂时关闭)', link: 'http://gitlab.1owo.com'},
                 {key: '详细说明', link: '/works_detail/my_gitlab'}
             ]
         },
@@ -212,8 +212,6 @@ export const works =
                     浏览器打开就是一个windows或linux虚拟机，提供图形界面和多种linux发行版，用户有一点，
                     但最终由于老板资金不多又没拿到融资，短短不足两个月就失败了。
                     设计稿在卖电脑时漏转至移动硬盘，很可惜已丢失，只在百度中找到了封面这张模糊的图。
-                    老板刘金金在河南本地idc景安工作多年后创业，后来才知道他每次都搞这个每次都失败，故意欺骗员工拖欠工资，
-                    我知道的已有三波，唯一一次曝光人名，郑州从业者请避雷。
                      `,
             links: [
             ]

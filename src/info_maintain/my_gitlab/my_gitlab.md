@@ -1,6 +1,8 @@
 自建Gitlab服务
 ===
 ## Demo
+(太消耗资源，会导致服务器上其它服务崩溃。限制内存后性能达不到最低要求访问会502，因此关闭。有需求要看demo的联系我临时开启。)
+
 [在线demo 访问http://gitlab.1owo.com](http://gitlab.1owo.com)  
 **管理员账户: root**  
 **密码: %6qwerty**  

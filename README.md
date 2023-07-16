@@ -1,3 +1,65 @@
+Portfolio 2020
+===
+## Brief
+Status: Obsoleted  
+Year: 2020 early  
+Code: [repo](https://github.com/zyzypy/portfolio_old)  
+Demo: not provided
+
+Introduce:  
+I did a portfolio website, cause of several reasons:  
+- Summarize and sort out the work of previous years.
+- After resignation and under Covid-19 block-down(anti-human) period, so I'm in idle.
+- I taught a frontend class in my previous company since lacking of frontend teacher,hence my frontend foundational exercised. 
+- I saw a perfect portfolio website of a man, [yandev](https://yandev.de), an excellent full stack programmer with coding skill 
+and UI skill, it's my ideal. I imitate his design, implement via myself, for purpose of exercising frontend skill.   
+
+
+## Tech Stack
+- Vue2 Vue-CLI Vue-Router ES6
+- Buefy bulma CSS/Stylus vue-loader material-design-icon 
+- axios vue-video-player vue-markdown
+- Babel Eslint Webpack
+
+
+Since get into frontend backend separation development and Nodejs came out, since Angular/React/Vue came out.  
+Frontend projects became more and more complexity, is no longer just HTML/CSS/JS.   
+For example, JS/ES5/ES6 babel,  
+varies syntax writing a function, varies syntax about import,  
+CSS/SASS/Stylus/Less css-loader,  
+npm/yarn、dependence devDependence package.json package-lock.json、large size of dir node_modules,  
+Vue、single vue component、vue-router、vue-cli、vue-cli plugins,  
+XMLRequest、ajax、nodejs、http、axios,
+Webpack、path alias, thanks to vue-cli to has decreased several configs,  
+Oh my god! I don't want to face it again.  
+
+Frontend ecology develop rapidly, so do vary rapidly. I even can't run this project which I wrote, maybe fix package 
+version can work. A lot of packages and tech stack goes to death during just three years. I didn't save a dist,
+and my new portfolio has came out, hence no live demo provided for this project.
+
+It's a hard work for backend programmer. Especially mentioning, Buefy is the most designed CSS framework I have ever seen,
+additionally, and wrote some CSS/Stylus for animation effects except using Buefy. As for content, except my own work,
+I wrote some articles and deployed some open source service like broadcast pushing steam service or net crawler IP pool.
+
+
+## Screen shot
+![](./README_IMG/1.png)
+![](./README_IMG/2.png)
+![](./README_IMG/3.png)
+![](./README_IMG/4.png)
+
+
+## license
+UI imitate from yandev.de. Illustrators from dribbble. Icons from material design. 
+Dir src/info_maintain are about my information witch prohibited for other purposes。
+
+
+
+
+
+个人作品集网页（旧）
+---
+状态：过时 废弃
 ## 介绍
 2020年初，适逢疫情和换工作间隙，想把这几年好好总结一下。作品内容主要来个人工作总结、项目、教程、开源demo，很高兴有整理资料的习惯，所以迁移的比较顺利。
 
@@ -27,5 +89,5 @@ adobe AI中画出矢量图形和动效，导出为svg，再作为网页背景。
 网站样式模仿自yandev.de 。  
 插画图来自dribbble 。  
 图标来自material design。  
-我的仓库代码开源。我的个人作品信息src/info_maintain目录禁做他用。  
+我的个人作品信息src/info_maintain目录禁做他用。  
 
